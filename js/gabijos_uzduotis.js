@@ -1,13 +1,13 @@
+
 //uzduotis 2: sukeisti a ir b reiksmes
-//let a = 5;
-//let b = 3;
+let e = 5;
+let d = 3;
 
-//let k;
-//k = a;
-//a = b;
-//b = k;
-//console.log(a,b);
-
+let k;
+k = e;
+e = d;
+d = k;
+console.log(e,d);
 
 // uzduotis 3: padarykite kad ekrane matytume 555. a, b ir c turi islikti penketais
 

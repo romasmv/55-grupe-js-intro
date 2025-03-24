@@ -344,7 +344,7 @@ console.log( skaitmenuKiekisSkaiciuje( 5 ) );
 console.log( skaitmenuKiekisSkaiciuje( 781 ) );
 console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
 console.log( skaitmenuKiekisSkaiciuje( true ) );
-console.log( skaitmenuKiekisSkaiciuje( “asd” ) );
+console.log( skaitmenuKiekisSkaiciuje( ) );
 console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 
 
