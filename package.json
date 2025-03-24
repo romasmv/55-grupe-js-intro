@@ -1,0 +1,25 @@
+{
+  "name": "labas-rytas",
+  "version": "1.0.0",
+  "description": "pirmasis projektas apie JS (JavaScript)",
+  "main": "index.js",
+  "scripts": {
+    "homework" : "node --watch ./js/20-homework.js",
+    "if": "node --watch ./js/5-if",
+    "boolean" : "node --watch ./js/4-boolean.js",
+    "function" : "node --watch ./js/3-function.js",
+    "string" : "node --watch ./js/2-string.js",
+    "number" : "node --watch ./js/1-number.js",
+    "js": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "code",
+    "kebabas",
+    "pomidoras"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
