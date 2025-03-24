@@ -17,7 +17,7 @@
       - array methods
       - object methods
 -   palyginimas:
-    - if
+   ~~ - if ~~
     - ternary
     - switch
 -   ciklas:
