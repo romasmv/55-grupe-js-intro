@@ -278,12 +278,17 @@ console.clear();
 
 // 1. Funkcija pavadinimu “tusciaFunkcija”:
  
-//  a. nepriima jokių kintamųjų
+ //  a. nepriima jokių kintamųjų
  //  b. neatlieka jokios vidinės logikos
  //  c. gražina boolean tipo reikšmę “false”
  //  d. TESTAS:
  //      i. console.log( tusciaFunkcija() );
  //      ii. rezultatas: false
+
+function tusciaFunkcija() {
+  return false;
+}
+console.log(tusciaFunkcija());
 
 //  2. Funkcija pavadinimu “daugyba”:
  
@@ -296,9 +301,21 @@ console.clear();
  //    III. console.log( daugyba( skaicius1, skaicius3 ) );
  //     IV. rezultatas: teisingos reikšmės;
 
+ const num1 = 1;
+ const num2 = 5; 
+ const num3 =num1+num2
+
+ function daugyba(num3) {
+  return num3;
+ }
+ console.log(daugyba(num3));
+ console.log(daugyba(num1*num2));
+ console.log(daugyba(num3*num2));
+ console.log(daugyba(num1*num3));
+
 //  3. Funkcija pavadinimu “skaitmenuKiekisSkaiciuje”:
  
-//  a. priima vieną kintamąjį
+ //  a. priima vieną kintamąjį
  //  b. jei perduotas kintamasis nėra skaičiaus tipo, tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
  //  c. priešingu atveju, funkcija tęsia darbą
  //  d. į atskirą kintamąjį įsimena skaičių sudarančių skaitmenų kiekį
@@ -316,6 +333,19 @@ rezultatas: “Pateikta netinkamo tipo reikšmė.” */
 rezultatas: “Pateikta netinkamo tipo reikšmė.” */
  /*     VI. console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 rezultatas: “Pateikta netinkamo tipo reikšmė.” */
+
+
+
+function skaitmenuKiekisSkaiciuje() {
+  return    ;
+}
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( “asd” ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 
 
 //   4.  Funkcija pavadinimu “didziausiasSkaiciusSarase”:
