@@ -112,7 +112,7 @@ sentence4 += dictionary[i++] + ',';
 sentence4 += dictionary[i++] + '.';
  console.log(sentence4);
 
-let j = 0=-1;
+let j = -1;
 let sentence5 = '++Patiekalui reikes:';
 sentence5 += dictionary[++j] + ','; //naudoju ++ pries [++j] let turi prasideti let j = -1
 sentence5 += dictionary[++j] + ',';
