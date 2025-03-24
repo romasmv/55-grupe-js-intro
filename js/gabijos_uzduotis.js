@@ -24,8 +24,8 @@ console.log(a+b+c);
 // Funkcijos užduotis
 
 const mokinys1 = ['Tadas', 8, 9, 10, 4, 7];
-const mokinys2 = ['Rima', 8, 9, 10, 4, 7];
-const mokinys3 = ['Gabija', 3, 3, 3, 4, 4];
+const mokinys2 = ['Rima', 3, 3, 5, 5, 1];
+const mokinys3 = ['Gabija', 1, 1, 1, 1, 1];
 
 function mokinioVidurkis (mokinys)
 { 
