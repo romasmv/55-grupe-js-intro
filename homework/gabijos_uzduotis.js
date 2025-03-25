@@ -53,14 +53,14 @@ mokinioVidurkis(mokinys3);
  const film2 = ['Fores Gump', 'nuotikiu', 9 ];
  const film3 = ['Fast and Furiuos', 'veiksmo', 10 ];
  const film4 = ['Prarastasis miestas Z', 'nuotikiu', 7 ];
- const film5 = ['The Notebook', 'romantinis', 7];
+ const film5 = ['The Notebook', 'romantinis', 10];
 
  const megstZanras = 'veiksmo';
- const norimasVert = 9;
+ const norimasVert = 8;
 
  function kasManTinka (film){
-    if (film[1] ===  megstZanras && norimasVert >= norimasVert) {
-        return 'Man patinktu' 
+    if (film[1] ===  megstZanras && film[2] >= norimasVert) {
+        return `Man patinktu ${film[1]} filmas: ${film[0]} `
     } else {return 'Netinka'}
       }
 
@@ -87,3 +87,5 @@ let sum = addNum(skaiciai1);
 console.log(addNum(skaiciai1));
 
 tellNum(skaiciai1);
+
+
