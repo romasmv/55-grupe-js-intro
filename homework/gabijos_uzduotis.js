@@ -43,6 +43,47 @@ function mokinioVidurkis (mokinys)
         } 
     }
 }
-mokinioVidurkis(mokinys1)
-mokinioVidurkis(mokinys2)
-mokinioVidurkis(mokinys3)
+mokinioVidurkis(mokinys1);
+mokinioVidurkis(mokinys2);
+mokinioVidurkis(mokinys3);
+
+ // uzduotis 2
+
+ const film1 = ['The Matrix', 'veiksmo', 8];
+ const film2 = ['Fores Gump', 'nuotikiu', 9 ];
+ const film3 = ['Fast and Furiuos', 'veiksmo', 10 ];
+ const film4 = ['Prarastasis miestas Z', 'nuotikiu', 7 ];
+ const film5 = ['The Notebook', 'romantinis', 7];
+
+ const megstZanras = 'veiksmo';
+ const norimasVert = 9;
+
+ function kasManTinka (film){
+    if (film[1] ===  megstZanras && norimasVert >= norimasVert) {
+        return 'Man patinktu' 
+    } else {return 'Netinka'}
+      }
+
+console.log(kasManTinka(film1));
+console.log(kasManTinka(film2));
+console.log(kasManTinka(film3));
+console.log(kasManTinka(film4));
+console.log(kasManTinka(film5));
+
+
+
+
+
+const skaiciai1 = [1, 2, 3]
+function addNum(sk) {
+    return (sk[0]+sk[1]+sk[2]);
+}
+
+function tellNum(sk) {
+    console.log(sk[0]);
+    
+}
+let sum = addNum(skaiciai1);
+console.log(addNum(skaiciai1));
+
+tellNum(skaiciai1);
