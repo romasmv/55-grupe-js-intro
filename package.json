@@ -4,9 +4,10 @@
   "description": "pirmasis projektas apie JS (JavaScript)",
   "main": "index.js",
   "scripts": {
-    "gabijos_uzduotis" : "node --watch ./js/gabijos_uzduotis.js",
+    "typeof" : "node --watch ./js/7-typeof.js",
+    "gabijos_uzduotis" : "node --watch ./homework/gabijos_uzduotis.js",
     "array" : "node --watch ./js/6-array.js",
-    "homework" : "node --watch ./js/20-homework.js",
+    "homework" : "node --watch ./homework/20-homework.js",
     "if": "node --watch ./js/5-if",
     "boolean" : "node --watch ./js/4-boolean.js",
     "function" : "node --watch ./js/3-function.js",
@@ -14,7 +15,9 @@
     "number" : "node --watch ./js/1-number.js",
     "js": "node ./index.js",
     "adult" : "node --watch ./task/adult.js",
+    "multiply" : "node --watch ./task/multiply.js",
     "text-size" : "node --watch ./task/text-size.js",
+    "marks-overage" : "node --watch ./task/marks-overage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
