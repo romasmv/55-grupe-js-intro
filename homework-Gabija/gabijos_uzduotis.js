@@ -348,8 +348,8 @@ if (sarasas10[0] === skaicius) {
   
   console.clear();
 
- // 1. Funkcija: ar skaičius teigiamas
-
+ 
+  //1. Patikrinkite, ar skaičius teigiamas
   function arTeigiamas(skaicius) {
     if (skaicius > 0) {
       console.log("Skaičius teigiamas");
@@ -357,6 +357,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Skaičius nėra teigiamas");
     }
   }
+  arTeigiamas(5);
   
   
   
@@ -367,7 +368,7 @@ if (sarasas10[0] === skaicius) {
     let rezultatas = skaicius * skaicius;
     console.log("Skaičiaus kvadratas:", rezultatas);
   }
-  
+  kvadratas(4);
   
   
   
@@ -380,7 +381,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Didesnis:", b);
     }
   }
-  
+  didesnis(7, 3);
   
   
   
@@ -397,7 +398,8 @@ if (sarasas10[0] === skaicius) {
       console.log("Eilutėje nėra žodžio 'JavaScript'");
     }
   }
-  
+  tikrintiJavaScript('JavaScript') 
+
   //5. Funkcija: ar skaičius lyginis
   
   function arLyginis(skaicius) {
@@ -407,6 +409,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Skaičius yra nelyginis");
     }
   }
+  arLyginis(2);
 
  // 6. Funkcija: išvesti priešingą reikšmę
 
@@ -417,7 +420,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Tai nėra skaičius");
     }
   }
-  
+  priesingaReiksme(10);
 
   
  // 7a. Funkcija: stačiakampio plotas iš masyvo
@@ -428,7 +431,7 @@ if (sarasas10[0] === skaicius) {
     let plotas = ilgis * plotis;
     console.log("Plotas:", plotas);
   }
-  
+  plotasIsMasyvo([5, 3])
 
   
   //7b. Funkcija: stačiakampio plotas iš dviejų kintamųjų
@@ -437,8 +440,7 @@ if (sarasas10[0] === skaicius) {
     let plotas = ilgis * plotis;
     console.log("Plotas:", plotas);
   }
-  
-
+  plotasIlgisPlotis(6, 3)
   
  // 8. Funkcija: ar skaičius dalijasi iš 3
   
@@ -449,7 +451,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Nesidalija iš 3");
     }
   }
-  
+  dalijasiIs3(9);
 
   
  // 9. Funkcija: ar tekstas prasideda raide „a“
@@ -461,7 +463,7 @@ if (sarasas10[0] === skaicius) {
       console.log("Tekstas neprasideda raide 'a'");
     }
   }
-  
+  prasidedaA("arbuzas")
 
   
  // 10. Funkcija: trijų skaičių vidurkis
@@ -471,7 +473,7 @@ if (sarasas10[0] === skaicius) {
     let vid = suma / 3;
     console.log("Vidurkis:", vid);
   }
-  
+  vidurkis(4, 5, 6);
 
   
  // 11. Funkcija: teksto ilgis
@@ -480,8 +482,7 @@ if (sarasas10[0] === skaicius) {
     let ilgis = tekstas.length;
     console.log("Teksto ilgis:", ilgis);
   }
-  
-
+  tekstoIlgis("labas")
   
  // 12. Funkcija: sujungti dvi eilutes
   
@@ -489,7 +490,7 @@ if (sarasas10[0] === skaicius) {
     let sujungta = eil1 + eil2;
     console.log("Sujungta eilutė:", sujungta);
   }
-  
+  sujungtiEilutes("Labas", " pasaulis")
 
   
 //  13. Funkcija: ar skaičius tarp dviejų reikšmių (imtinai)
@@ -501,4 +502,4 @@ if (sarasas10[0] === skaicius) {
       console.log("Skaičius nėra tarp reikšmių");
     }
   }
-  
+  tarpReiksmiu(15, 10, 20);
