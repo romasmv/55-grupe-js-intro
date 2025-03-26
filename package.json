@@ -17,6 +17,7 @@
     "js": "node ./index.js",
     "adult" : "node --watch ./task/adult.js",
     "multiply" : "node --watch ./task/multiply.js",
+    "interval-sum" : "node --watch ./task/interval-sum.js",
     "text-size" : "node --watch ./task/text-size.js",
     "multi-table" : "node --watch ./task/multi-table.js",
     "marks-overage" : "node --watch ./task/marks-overage.js",
