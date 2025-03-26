@@ -1,96 +1,4 @@
 
-//uzduotis 2: sukeisti a ir b reiksmes
-let e = 5;
-let d = 3;
-
-let k;
-k = e;
-e = d;
-d = k;
-console.log(e,d);
-
-// uzduotis 3: padarykite kad ekrane matytume 555. a, b ir c turi islikti penketais
-
-let a = 5;
-let b = 5;
-let c = 5;
-
-a = '5';
-b = '5';
-c = '5';
-console.log(a+b+c);
-
-
-// Funkcijos užduotis
-
-const mokinys1 = ['Tadas', 8, 9, 10, 4, 7];
-const mokinys2 = ['Rima', 3, 3, 5, 5, 1];
-const mokinys3 = ['Gabija', 1, 1, 1, 1, 1];
-
-function mokinioVidurkis (mokinys)
-{ 
-    console.log('Mokinio varadas:' + mokinys[0])
-    let vidurkis = (mokinys[1] +mokinys[2] + mokinys[3] + mokinys[4] + mokinys[5])/5
-    if (vidurkis>=3.5)
-    {
-        console.log(mokinys[0] + ' išlaike. Jo vidurkis:' + vidurkis);    
-    }
-    else {
-        let vidurkisNaujas = ((vidurkis*5)+10)/6
-        console.log(mokinys[0] + ' neišlaike. Jo dabartinis vidurkis:' + vidurkis);
-        if (vidurkisNaujas>=3.5) {
-            console.log(mokinys[0] + ' išlaikytu kursą jeigu gautų vieną dešimtukq');     
-        } 
-    }
-}
-mokinioVidurkis(mokinys1);
-mokinioVidurkis(mokinys2);
-mokinioVidurkis(mokinys3);
-
- // uzduotis 2
-
- const film1 = ['The Matrix', 'veiksmo', 8];
- const film2 = ['Fores Gump', 'nuotikiu', 9 ];
- const film3 = ['Fast and Furiuos', 'veiksmo', 10 ];
- const film4 = ['Prarastasis miestas Z', 'nuotikiu', 7 ];
- const film5 = ['The Notebook', 'romantinis', 10];
-
- const megstZanras = 'veiksmo';
- const norimasVert = 8;
-
- function kasManTinka (film){
-    if (film[1] ===  megstZanras && film[2] >= norimasVert) {
-        return `Man patinktu ${film[1]} filmas: ${film[0]} `
-    } else {return 'Netinka'}
-      }
-
-console.log(kasManTinka(film1));
-console.log(kasManTinka(film2));
-console.log(kasManTinka(film3));
-console.log(kasManTinka(film4));
-console.log(kasManTinka(film5));
-
-
-const skaiciai1 = [1, 2, 3]
-function addNum(sk) {
-    return (sk[0]+sk[1]+sk[2]);
-}
-
-function tellNum(sk) {
-    console.log(sk[0]);
-    
-}
-let sum = addNum(skaiciai1);
-console.log(addNum(skaiciai1));
-
-tellNum(skaiciai1);
-
-console.clear();
-
-
-
-
-
 // Užduotis su IF ir sąrašais (array)
 
 // 1. Patikrinkite, ar sąraše yra tam tikras skaičius.
@@ -195,7 +103,7 @@ if (sarasas3[0] > 0 || sarasas3[1] > 0 || sarasas3[2] > 0 || sarasas3[3] > 0) {
         
     } console.log (`didziausias skaicius sąraše: ${didziausiasSkaicius}`);
  
-    console.clear()   
+
 
 //   10. Patikrinkite, ar masyve yra daugiau nei 3 to paties skaičiaus elementai.
      //a. Pavyzdys: Patikrinkite, ar [2, 2, 2, 2, 2, 5, 6] turi daugiau nei 3 skaičiaus 2 elementus.
@@ -229,8 +137,12 @@ if (sarasas10[0] === skaicius) {
     console.log("Nėra daugiau nei 3 tokie patys skaičiai");
   }
 
-  console.clear()  
-  // 1. Patikrinkite, ar skaičius teigiamas
+  console.log('--------------------');
+
+
+       //  Užduotys su IF
+//1. Patikrinkite, ar skaičius teigiamas.
+       //a. Pavyzdys: Patikrinkite, ar skaičius = 3 yra teigiamas.
 
   let skaicius1 = 3;
   
@@ -240,10 +152,8 @@ if (sarasas10[0] === skaicius) {
     console.log("Skaičius nėra teigiamas");
   }
   
-  
-
-  
-  //2. Patikrinkite, ar skaičius dalijasi iš 5
+// 2. Patikrinkite, ar skaičius dalijasi iš 5.
+       // a. Pavyzdys: Pavyzdys: Patikrinkite, ar skaičius = 15 dalijasi iš 5.  
   
   let skaicius2 = 15;
   
@@ -253,10 +163,8 @@ if (sarasas10[0] === skaicius) {
     console.log("Skaičius nesidalija iš 5");
   }
   
-  
-
-  
-  //3. Patikrinkite, ar teksto ilgis didesnis nei 5 simboliai
+//  3. Patikrinkite, ar teksto tipo kintamajame yra daugiau nei 5 simboliai.
+      // a. Pavyzdys: Patikrinkite, ar eilutėje str = 'hello' yra daugiau nei 5 simboliai.
   
   let str = "hello";
   
@@ -265,11 +173,8 @@ if (sarasas10[0] === skaicius) {
   } else {
     console.log("Tekstas yra 5 ar trumpesnis");
   }
-  
-  
-
-  
- // 4. Patikrinkite, ar asmuo turi teisę balsuoti (nuo 18 m.)
+//  4. Patikrinkite, ar asmuo turi teisę balsuoti (amžius didesnis arba lygus 18 metų).
+     // a. Pavyzdys: Patikrinkite, ar asmuo turi teisę balsuoti, jei jo amžius = 20 metų.
   
   let amzius4 = 20;
   
@@ -278,11 +183,9 @@ if (sarasas10[0] === skaicius) {
   } else {
     console.log("Asmuo neturi teisės balsuoti");
   }
-  
-  
 
-  
-  //5. Patikrinkite, ar asmuo yra paauglys (nuo 13 iki 19 m.)
+//  5. Patikrinkite, ar asmuo yra paauglys (nuo 13 iki 19 metų).
+     // a. Pavyzdys: Patikrinkite, ar amžius = 15 metų atitinka paauglio amžių..
   
   let amzius5 = 15;
   
@@ -292,10 +195,8 @@ if (sarasas10[0] === skaicius) {
     console.log("Asmuo nėra paauglys");
   }
   
-  
-
-  
- // 6. Patikrinkite, ar skaičius yra nelyginis
+// 6. Patikrinkite, ar skaičius yra nelyginis.
+     //a. Pavyzdys: Patikrinkite, ar skaičius = 7 yra nelyginis.
   
   let skaicius6 = 7;
   
@@ -305,10 +206,8 @@ if (sarasas10[0] === skaicius) {
     console.log("Skaičius yra lyginis");
   }
   
-  
-
-  
- // 7. Patikrinkite, ar eilutė lygi "JavaScript"
+// 7. Patikrinkite, ar eilutė lygi "JavaScript".
+     // a. Pavyzdys: Patikrinkite, teksto kintamasis = "JavaScript" yra lygus "JavaScript".
   
   let tekstas7 = "JavaScript";
   
@@ -321,7 +220,8 @@ if (sarasas10[0] === skaicius) {
   
 
   
- // 8. Patikrinkite, ar skaičius yra nuo 10 iki 20 (imtinai)
+// 8. Patikrinkite, ar skaičius yra nuo 10 iki 20 (imtinai).
+      //a. Pavyzdys: Patikrinkite, ar skaičius = 15 yra tarp 10 ir 20.
   
   let skaicius8 = 15;
   
@@ -331,10 +231,9 @@ if (sarasas10[0] === skaicius) {
     console.log("Skaičius nėra tarp 10 ir 20");
   }
   
-  
 
-  
- // 9. Patikrinkite, ar skaičius yra didesnis arba lygus 100
+// 9. Patikrinkite, ar skaičius yra didesnis arba lygus 100.
+     //a. Pavyzdys: Patikrinkite, ar skaičius = 150 yra didesnis arba lygus 100.
   
   let skaicius9 = 150;
   
@@ -344,13 +243,14 @@ if (sarasas10[0] === skaicius) {
     console.log("Skaičius mažesnis nei 100");
   }
   
+ console.log('--------------------');
 
+     
+       // Užduotys su funkcijomis
+
+//  1. Sukurkite funkciją, skirtą patikrinti, ar skaičius yra teigiamas.
   
-  console.clear();
-
- 
-  //1. Patikrinkite, ar skaičius teigiamas
-  function arTeigiamas(skaicius) {
+       function arTeigiamas(skaicius) {
     if (skaicius > 0) {
       console.log("Skaičius teigiamas");
     } else {
@@ -359,10 +259,7 @@ if (sarasas10[0] === skaicius) {
   }
   arTeigiamas(5);
   
-  
-  
-  
- // 2. Funkcija: skaičiaus kvadratas
+// 2. Sukurkite funkciją skaičiaus kvadratui apskaičiuoti.
   
   function kvadratas(skaicius) {
     let rezultatas = skaicius * skaicius;
@@ -370,10 +267,8 @@ if (sarasas10[0] === skaicius) {
   }
   kvadratas(4);
   
-  
-  
- //3. Funkcija: kuris iš dviejų skaičių didesnis
-  
+// 3. Sukurkite funkciją, kuri paima du skaičius ir išveda į console didesnįjį.
+
   function didesnis(a, b) {
     if (a > b) {
       console.log("Didesnis:", a);
@@ -383,9 +278,7 @@ if (sarasas10[0] === skaicius) {
   }
   didesnis(7, 3);
   
-  
-  
-  //4. Funkcija: ar tekste yra žodis „JavaScript“ (paprastai)
+// 4. Sukurkite funkciją, kuri patikrintų, ar eilutėje yra žodis „JavaScript“.
   
   function tikrintiJavaScript(tekstas) {
     if (
@@ -400,7 +293,8 @@ if (sarasas10[0] === skaicius) {
   }
   tikrintiJavaScript('JavaScript') 
 
-  //5. Funkcija: ar skaičius lyginis
+
+// 5. Sukurkite funkciją, tikrinančią, ar skaičius yra lyginis.
   
   function arLyginis(skaicius) {
     if (skaicius % 2 === 0) {
@@ -411,7 +305,10 @@ if (sarasas10[0] === skaicius) {
   }
   arLyginis(2);
 
- // 6. Funkcija: išvesti priešingą reikšmę
+/* 6. Sukurkite funkciją, kuri į console išvestų priešingą reikšmę 
+     (jei skaičius teigiamas, išvestų neigiamą, jei yra gaunamas žodis tai žodį turi 
+     parašyti atvirkčiai. Apsibrėžkite kokio ilgio žodis turi būti gaunamas! ar 4, ar 5 ar kiek raidžių!
+     imkite vieną variantą kolkas) */
 
   function priesingaReiksme(ivestis) {
     if (typeof ivestis === "number") {
@@ -423,7 +320,8 @@ if (sarasas10[0] === skaicius) {
   priesingaReiksme(10);
 
   
- // 7a. Funkcija: stačiakampio plotas iš masyvo
+// 7. Sukurkite funkciją, kuri apskaičiuotų stačiakampio plotą.
+    //a. Padaryti su sąrašo (array) tipo kintamuoju
   
   function plotasIsMasyvo(masyvas) {
     let ilgis = masyvas[0];
@@ -433,8 +331,7 @@ if (sarasas10[0] === skaicius) {
   }
   plotasIsMasyvo([5, 3])
 
-  
-  //7b. Funkcija: stačiakampio plotas iš dviejų kintamųjų
+     // b. Padaryti su keliais skaičių tipo kintamaisiais
   
   function plotasIlgisPlotis(ilgis, plotis) {
     let plotas = ilgis * plotis;
@@ -442,7 +339,8 @@ if (sarasas10[0] === skaicius) {
   }
   plotasIlgisPlotis(6, 3)
   
- // 8. Funkcija: ar skaičius dalijasi iš 3
+
+  // 8. Sukurkite funkciją, kuri tikrina, ar skaičius dalijasi iš 3.
   
   function dalijasiIs3(skaicius) {
     if (skaicius % 3 === 0) {
@@ -454,7 +352,7 @@ if (sarasas10[0] === skaicius) {
   dalijasiIs3(9);
 
   
- // 9. Funkcija: ar tekstas prasideda raide „a“
+// 9. Sukurkite funkciją, kuri tikrina, ar teksto tipo kintamasis prasideda raide 'a'.
   
   function prasidedaA(tekstas) {
     if (tekstas[0] === "a" || tekstas[0] === "A") {
@@ -466,7 +364,7 @@ if (sarasas10[0] === skaicius) {
   prasidedaA("arbuzas")
 
   
- // 10. Funkcija: trijų skaičių vidurkis
+// 10. Sukurkite funkciją trijų skaičių vidurkiui rasti.
   
   function vidurkis(a, b, c) {
     let suma = a + b + c;
@@ -476,7 +374,7 @@ if (sarasas10[0] === skaicius) {
   vidurkis(4, 5, 6);
 
   
- // 11. Funkcija: teksto ilgis
+// 11. Sukurkite funkciją, grąžinančią teksto tipo kintamojo ilgį.
   
   function tekstoIlgis(tekstas) {
     let ilgis = tekstas.length;
@@ -484,7 +382,7 @@ if (sarasas10[0] === skaicius) {
   }
   tekstoIlgis("labas")
   
- // 12. Funkcija: sujungti dvi eilutes
+// 12. Sukurkite funkciją dviem eilutėms sujungti
   
   function sujungtiEilutes(eil1, eil2) {
     let sujungta = eil1 + eil2;
@@ -493,8 +391,8 @@ if (sarasas10[0] === skaicius) {
   sujungtiEilutes("Labas", " pasaulis")
 
   
-//  13. Funkcija: ar skaičius tarp dviejų reikšmių (imtinai)
-  
+//  13. Sukurkite funkciją, kuri tikrina, ar skaičius yra tarp dviejų reikšmių (imtinai).
+ 
   function tarpReiksmiu(skaicius, nuo, iki) {
     if (skaicius >= nuo && skaicius <= iki) {
       console.log("Skaičius yra tarp reikšmių");
