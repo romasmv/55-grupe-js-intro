@@ -88,4 +88,24 @@ console.log(addNum(skaiciai1));
 
 tellNum(skaiciai1);
 
+console.clear();
+
+// Užduotis su IF ir sąrašais (array)
+
+// 1. Patikrinkite, ar sąraše yra tam tikras skaičius.
+     // a. Pavyzdys: Patikrinkite, ar sąraše [1, 2, 3, 4] yra skaičius 3.
+
+const sarasas1 = [1, 2, 3, 4];
+function tikrintiSarasa(sarasas1){
+if (sarasas1.includes(3) ) {
+    return 'Taip yra 3'}
+ else {return 'Nera'};
+}
+
+console.log(tikrintiSarasa(sarasas1))
+
+// 2. Patikrinkite, ar masyvas tuščias.
+     // a. Pavyzdys: Patikrinkite, ar sąrašas [] yra tuščias.
+   
+ 
 
