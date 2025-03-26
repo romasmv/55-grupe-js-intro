@@ -6,9 +6,9 @@
   "scripts": {
     "for" : "node --watch ./js/8-for.js",
     "typeof" : "node --watch ./js/7-typeof.js",
-    "gabijos_uzduotis" : "node --watch ./homework/gabijos_uzduotis.js",
+    "gabijos_uzduotis" : "node --watch ./homework-Gabija/gabijos_uzduotis.js",
     "array" : "node --watch ./js/6-array.js",
-    "homework" : "node --watch ./homework/20-homework.js",
+    "homework" : "node --watch ./homework-Gabija/20-homework.js",
     "if": "node --watch ./js/5-if",
     "boolean" : "node --watch ./js/4-boolean.js",
     "function" : "node --watch ./js/3-function.js",

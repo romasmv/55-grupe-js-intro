@@ -35,7 +35,7 @@ for (let k = 0; k < 1; k +=0.1) {
 
 console.log('----------------');
 
-for (let k = 0; k < 10; k ++) {   //k=0 pradine salyga/ k<10 galutine salyga/ k++ ka daryti su salyga
+for (let k = 0; k < 10; k ++) {   //k=0 pradine salyga/ k<10 galutine salyga/ k++ nuo 0 iki 10
     console.log(k/10);
 }
 console.log('----------------');
