@@ -310,14 +310,33 @@ if (sarasas10[0] === skaicius) {
      parašyti atvirkčiai. Apsibrėžkite kokio ilgio žodis turi būti gaunamas! ar 4, ar 5 ar kiek raidžių!
      imkite vieną variantą kolkas) */
 
-  function priesingaReiksme(ivestis) {
-    if (typeof ivestis === "number") {
-      console.log(-ivestis);
-    } else {
-      console.log("Tai nėra skaičius");
+     function atvirksciaiReiksme(reiksme) {
+      if (typeof reiksme === "number") {
+        if (reiksme > 0) {
+          console.log(-reiksme);
+        } else {
+          console.log(0 - reiksme);
+        }
+      } else if (typeof reiksme === "string") {
+        if (reiksme.length === 4) {
+          let atvirkscias = "";
+          for (let i = reiksme.length - 1; i >= 0; i--) {
+            atvirkscias += reiksme[i];
+          }
+          console.log(atvirkscias);
+        } else {
+          console.log("Klaida: žodis turi būti 4 raidžių.");
+        }
+      } else {
+        console.log("Klaida: įveskite skaičių arba žodį.");
+      }
     }
-  }
-  priesingaReiksme(10);
+    
+
+    atvirksciaiReiksme(5); 
+    atvirksciaiReiksme(-8); 
+    atvirksciaiReiksme("vila"); 
+    atvirksciaiReiksme("namas"); 
 
   
 // 7. Sukurkite funkciją, kuri apskaičiuotų stačiakampio plotą.
