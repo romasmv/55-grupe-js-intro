@@ -92,7 +92,7 @@ for (let i = 1; i < 50; i++) {
         ;
     }
  }
- console.clear();
+
  // 12. Spausdinti skaičius nuo 1 iki 100, kurie dalijasi ir iš 3, ir iš 5.
 
  for (let i = 1; i <= 100; i++) {
@@ -101,7 +101,54 @@ for (let i = 1; i < 50; i++) {
     }
   }
  
+ // 13. Sukurkite for ciklą, kuris penkis kartus išspausdintų "Hello, World!".
 
+ for (let i = 1; i <= 5; i++) {
+    console.log("Hello, World");
+ }
 
+ // Sunkesnės užduotys:
 
+ // 1. Sukurkite for ciklą, kuris spausdina skaičius nuo 1 iki 100, tačiau kiekvieną skaičių, kuris dalijasi iš 4, reikia pakeisti žodžiu „Fizz“.
 
+ for (let i = 1; i <= 100; i++) {
+    if (i % 4 === 0) {
+      console.log("Fizz");
+    } else {
+      console.log(i);
+    }
+  }
+
+  // 2. Spausdinkite skaičius nuo 1 iki 100, bet skaičius, kurie dalijasi iš 3, pakeiskite "Fizz", skaičius, kurie dalijasi iš 5, - "Buzz", o skaičius, kurie dalijasi iš abiejų, - "FizzBuzz".
+
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+  
+  console.clear();
+  // 3. Spausdinkite pirmuosius 10 skaičių Fibonačio sekoje.
+  
+  //Fibonačio skaičių seka – sveikųjų skaičių seka {Fn}, nusakoma taip: F0 = 0, F1 = 1, Fn+1 = Fn + Fn-1. Seka prasideda šiais skaičiais: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377. Kiekvienas šios sekos skaičius lygus dviejų prieš jį einančių skaičių sumai.
+
+  let a = 0;
+  let b = 1;
+  
+  console.log(a);
+  console.log(b);
+  
+  for (let i = 2; i < 10; i++) {
+    let nextNum = a + b;
+    console.log(nextNum);
+    a = b;
+    b = nextNum;
+  }
+
+  //  4. Spausdinkite skaičius nuo 1 iki 20 ir prie kiekvieno lyginio skaičiaus spausdinkite "Even", o prie kiekvieno nelyginio - "Odd".
