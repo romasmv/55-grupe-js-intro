@@ -354,16 +354,31 @@ rezultatas: “Pateikta netinkamo tipo reikšmė.” */
 
 
 
-function skaitmenuKiekisSkaiciuje() {
-  return    ;
+function skaiciuKiekisSkaiciuje(reiksme) {
+  if (typeof reiksme !== "number" || isNaN(reiksme)) {
+    return "Pateikta netinkamo tipo reikšmė.";
+  }
+
+  let tekstas = reiksme + ""; // pavertimas į tekstą
+  let kiekis = 0;
+
+  for (let i = 0; i < tekstas.length; i++) {
+    let simbolis = tekstas[i];
+    if (simbolis >= "0" && simbolis <= "9") {
+      kiekis++;
+    }
+  }
+
+  return kiekis;
 }
 
-console.log( skaitmenuKiekisSkaiciuje( 5 ) );
-console.log( skaitmenuKiekisSkaiciuje( 781 ) );
-console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
-console.log( skaitmenuKiekisSkaiciuje( true ) );
-console.log( skaitmenuKiekisSkaiciuje( ) );
-console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+// TESTAI
+console.log(skaiciuKiekisSkaiciuje(5)); // rezultatas: 1
+console.log(skaiciuKiekisSkaiciuje(781)); // rezultatas: 3
+console.log(skaiciuKiekisSkaiciuje(37060123456)); // rezultatas: 11
+console.log(skaiciuKiekisSkaiciuje(true)); // rezultatas: "Pateikta netinkamo tipo reikšmė."
+console.log(skaiciuKiekisSkaiciuje("asd")); // rezultatas: "Pateikta netinkamo tipo reikšmė."
+console.log(skaiciuKiekisSkaiciuje(NaN)); // rezultatas: "Pateikta netinkamo tipo reikšmė."
 
 
 //   4.  Funkcija pavadinimu “didziausiasSkaiciusSarase”:
@@ -388,6 +403,37 @@ rezultatas: -1 */
 rezultatas: “Pateikta netinkamo tipo reikšmė.” */
  /*     VII. console.log( didziausiasSkaiciusSarase( [] ) );
 rezultatas: “Pateiktas sąrašas negali būti tuščias.” */
+
+function didziausiasSkaiciusSarase(sarasas) {
+  if (!Array.isArray(sarasas)) {
+    return "Pateikta netinkamo tipo reikšmė.";
+  }
+
+  if (sarasas.length === 0) {
+    return "Pateiktas sąrašas negali būti tuščias.";
+  }
+
+  let didziausias = sarasas[0];
+
+  for (let i = 1; i < sarasas.length; i++) {
+    if (sarasas[i] > didziausias) {
+      didziausias = sarasas[i];
+    }
+  }
+
+  return didziausias;
+}
+TESTAI:
+
+console.log(didziausiasSkaiciusSarase([1]));                    // 1
+console.log(didziausiasSkaiciusSarase([1, 2, 3]));              // 3
+console.log(didziausiasSkaiciusSarase([-5, 78, 14, 0, 18]));    // 78
+console.log(didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));   // 69
+console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8])); // -1
+console.log(didziausiasSkaiciusSarase("pomidoras"));           // "Pateikta netinkamo tipo reikšmė."
+console.log(didziausiasSkaiciusSarase([]));                    // "Pateiktas sąrašas negali būti tuščias."
+
+
 
 //  5.  Funkcija pavadinimu “isrinktiRaides”:
 
@@ -422,7 +468,51 @@ rezultatas: “Antrasis kintamasis turi būti didesnis už nulį.” */
 /*       IV. console.log( isrinktiRaides( “abc”, 4 ) );
 rezultatas: “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.” */
 /*        V. console.log( isrinktiRaides( 1561, 2 ) );
-rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
+rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”*/
+
+function isrinktiRaides(tekstas, zingsnis) {
+  // Patikrinimas ar tekstas yra string tipo
+  if (typeof tekstas !== 'string') {
+    return 'Pirmasis kintamasis yra netinkamo tipo.';
+  }
+
+  // Patikrinimas ar tekstas nėra tuščias ir ne ilgesnis nei 100 simbolių
+  if (tekstas.length === 0 || tekstas.length > 100) {
+    return 'Pirmojo kintamojo reikšmė yra netinkamo dydžio.';
+  }
+
+  // Patikrinimas ar zingsnis yra skaičiaus tipo
+  if (typeof zingsnis !== 'number') {
+    return 'Antrasis kintamasis yra netinkamo tipo.';
+  }
+
+  // Patikrinimas ar zingsnis didesnis už 0
+  if (zingsnis <= 0) {
+    return 'Antrasis kintamasis turi būti didesnis už nulį.';
+  }
+
+  // Patikrinimas ar zingsnis nėra didesnis už teksto ilgį
+  if (zingsnis > tekstas.length) {
+    return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.';
+  }
+
+  // Raidžių išrinkimas
+  let rezultatas = '';
+  for (let i = zingsnis - 1; i < tekstas.length; i += zingsnis) {
+    rezultatas += tekstas[i];
+  }
+
+  return rezultatas;
+}
+
+Testai pagal pavyzdžius:
+
+console.log(isrinktiRaides("abcdefg", 2)); // 'bdf'
+console.log(isrinktiRaides("abcdefghijkl", 3)); // 'cfil'
+console.log(isrinktiRaides("abc", 0)); // 'Antrasis kintamasis turi būti didesnis už nulį.'
+console.log(isrinktiRaides("abc", 4)); // 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.'
+console.log(isrinktiRaides(1561, 2)); // 'Pirmasis kintamasis yra netinkamo tipo.'
+
 
 //  6.  Funkcija pavadinimu “dalyba”:
 
@@ -435,3 +525,27 @@ rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
 //  d.grąžinti suskaičiuotą reikšmę
 //  e. TESTAI:
 //       I. sugalvoti bent 5 testus, kurie bendrai iš esmės patvirtintu gerą funkcijos veikimą */
+
+function dalyba(a, b) {
+  // Patikrinimai
+  if (typeof a !== 'number' || typeof b !== 'number') {
+      return 'Klaida: abu argumentai turi būti skaičiai';
+  }
+  if (b === 0) {
+      return 'Klaida: negalima dalinti iš nulio';
+  }
+
+  // Apskaičiuojame ir saugome rezultatą
+  let rezultatas = a / b;
+
+  // Grąžiname rezultatą
+  return rezultatas;
+}
+
+Testai:
+
+console.log(dalyba(10, 2)); // 5
+console.log(dalyba(5, 0)); // "Klaida: negalima dalinti iš nulio"
+console.log(dalyba("10", 2)); // "Klaida: abu argumentai turi būti skaičiai"
+console.log(dalyba(0, 5)); // 0
+console.log(dalyba(-10, 2)); // -5
