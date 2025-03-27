@@ -318,7 +318,7 @@ if (sarasas10[0] === skaicius) {
           console.log(0 - reiksme);
         }
       } else if (typeof reiksme === "string") {
-        if (reiksme.length === 4) {
+        if (reiksme.length === 4) { // žodis turi būti gaunamas  4 raidžių!
           let atvirkscias = "";
           for (let i = reiksme.length - 1; i >= 0; i--) {
             atvirkscias += reiksme[i];
@@ -336,7 +336,7 @@ if (sarasas10[0] === skaicius) {
     atvirksciaiReiksme(5); 
     atvirksciaiReiksme(-8); 
     atvirksciaiReiksme("vila"); 
-    atvirksciaiReiksme("namas"); 
+    atvirksciaiReiksme("namas"); // žodis turi būti gaunamas  4 raidžių!
 
   
 // 7. Sukurkite funkciją, kuri apskaičiuotų stačiakampio plotą.
@@ -420,3 +420,20 @@ if (sarasas10[0] === skaicius) {
     }
   }
   tarpReiksmiu(15, 10, 20);
+
+
+
+
+
+
+function arTeigiamsSkaicius(abs)
+ {  if (abs<0)
+        {return 'neigiamas skaicius';}
+    else{
+      return'teigiamas';
+    }
+  }
+
+console.log(arTeigiamsSkaicius(6));
+console.log(arTeigiamsSkaicius(-3));
+console.log(arTeigiamsSkaicius('tekstas'));
