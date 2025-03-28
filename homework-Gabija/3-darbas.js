@@ -14,7 +14,7 @@ for (let i = 10; i >= 1; i--) {
 
 // 3. Spausdinkite kiekvieną lyginį skaičių nuo 0 iki 20 naudodami for ciklą.
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 20; i++) {
    if (i % 2 === 0)
    console.log(i);
     ;
@@ -83,7 +83,6 @@ for (let i = 1; i < 50; i++) {
  }
 
 
-
  // 11. Spausdinti skaičius nuo 1 iki 50 imtinai, kurie dalijasi iš 5.
  for (let i = 1; i <= 50; i++) {
     let dalijasi = i % 5;
@@ -107,7 +106,12 @@ for (let i = 1; i < 50; i++) {
     console.log("Hello, World");
  }
 
+
+
+
+
  // Sunkesnės užduotys:
+
 
  // 1. Sukurkite for ciklą, kuris spausdina skaičius nuo 1 iki 100, tačiau kiekvieną skaičių, kuris dalijasi iš 4, reikia pakeisti žodžiu „Fizz“.
 
@@ -139,11 +143,10 @@ for (let i = 1; i < 50; i++) {
   //Fibonačio skaičių seka – sveikųjų skaičių seka {Fn}, nusakoma taip: F0 = 0, F1 = 1, Fn+1 = Fn + Fn-1. Seka prasideda šiais skaičiais: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377. Kiekvienas šios sekos skaičius lygus dviejų prieš jį einančių skaičių sumai.
 
   let a = 0;
-  let b = 1;
-  
   console.log(a);
+  let b = 1;
   console.log(b);
-  
+
   for (let i = 2; i < 10; i++) {
     let nextNum = a + b;
     console.log(nextNum);
@@ -152,3 +155,17 @@ for (let i = 1; i < 50; i++) {
   }
 
   //  4. Spausdinkite skaičius nuo 1 iki 20 ir prie kiekvieno lyginio skaičiaus spausdinkite "Even", o prie kiekvieno nelyginio - "Odd".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
