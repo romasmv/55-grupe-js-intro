@@ -6,6 +6,7 @@
   "scripts": {
     "for" : "node --watch ./js/8-for.js",
     "typeof" : "node --watch ./js/7-typeof.js",
+    "object" : "node --watch ./js/9-object.js",
     "1-darbas" : "node --watch ./homework-Gabija/1-darbas.js",
     "2-darbas" : "node --watch ./homework-Gabija/2-darbas.js",
     "3-darbas" : "node --watch ./homework-Gabija/3-darbas.js",
@@ -18,6 +19,7 @@
     "number" : "node --watch ./js/1-number.js",
     "js": "node ./index.js",
     "adult" : "node --watch ./task/adult.js",
+    "biggest-number" : "node --watch ./task/biggest-number.js",
     "interval-count" : "node --watch ./task/interval-count.js",
     "string-reverse" : "node --watch ./task/string-reverse.js",
     "multiply" : "node --watch ./task/multiply.js",
