@@ -505,7 +505,7 @@ function isrinktiRaides(tekstas, zingsnis) {
   return rezultatas;
 }
 
-Testai pagal pavyzdžius:
+// Testai pagal pavyzdžius:
 
 console.log(isrinktiRaides("abcdefg", 2)); // 'bdf'
 console.log(isrinktiRaides("abcdefghijkl", 3)); // 'cfil'

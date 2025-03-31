@@ -64,16 +64,15 @@ for (let i = 1; i <= 5; i++) {
 // 9. Atspausdinkite atvirkštinę eigą su žvaigždutėmis 5 eilutėse (pvz., *****, ****, *** ir t. t.).
 
 for (let i = 5; i >= 1 ; i--) {
-    let stars = '' ;
-    for (let j = 0; j < i; j++) {
-    stars += '*';  
-    }
-    console.log(stars);
-    ;
+  let stars = '' ;
+  for (let j = 0; j < i; j++) {
+  stars += '*';  
+  }
+  console.log(stars);
+  ;
 }
 
-
-// 10. Spausdinti skaičius nuo 1 iki 50, kurie dalijasi iš 3.
+ // 10. Spausdinti skaičius nuo 1 iki 50, kurie dalijasi iš 3.
 for (let i = 1; i < 50; i++) {
     let dalijasi = i % 3;
     if(dalijasi === 0){
@@ -154,8 +153,13 @@ for (let i = 1; i < 50; i++) {
     b = nextNum;
   }
 
-  //  4. Spausdinkite skaičius nuo 1 iki 20 ir prie kiekvieno lyginio skaičiaus spausdinkite "Even", o prie kiekvieno nelyginio - "Odd".
+  //  4. Spausdinkite skaičius nuo 1 iki 20 ir prie kiekvieno lyginio skaičiaus spausdinkite "Even", o prie kiekvieno nelyginio - "Odd".*/
 
+
+
+
+
+  
 
 
 
