@@ -1,27 +1,28 @@
 # JavaScript
 
--   kintamieji (atminties lasteles,duomenu tipai);
-    ~~- skaiciai (number)~~
-    ~~- tekstas (strig)~~
-    - logines reiksmes (boolean)
-    - sarasas (array)
-    - objektas (object)
-    - null 
-    - underfined
+-   ~~kintamieji~~ (atminties lasteles,duomenu tipai);
+    - ~~skaiciai (number)~~
+    - ~~tekstas (strig)~~
+    - ~~logines reiksmes (boolean)~~
+    - ~~sarasas (array)~~
+    - ~~objektas (object)~~
+    - ~~null~~ (reiksme neegzistuoja, bet mes ketiname ja gauti/paskaiciuoti)
+    - ~~underfined~~ (reiksme neegzistuoja, kai kreipiesi i atminti ir joje nera duomens)
 -   funkcijos (perpanaodojams kodo blokas/logika):
-    ~~- "paprastras"~~
+    - ~~"paprastras"~~
     - rodykline
     - metodai:
+      - Math methods
       - string methods
       - number methods
       - array methods
       - object methods
 -   palyginimas:
-   ~~ - if ~~
+    - ~~if~~
     - ternary
     - switch
 -   ciklas:
-    - for
+    - ~~for~~
     - while
     - for-of
     - for-in

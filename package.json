@@ -6,6 +6,7 @@
   "scripts": {
     "for" : "node --watch ./js/8-for.js",
     "typeof" : "node --watch ./js/7-typeof.js",
+    "math" : "node --watch ./js/10-math.js",
     "object" : "node --watch ./js/9-object.js",
     "1-darbas" : "node --watch ./homework-Gabija/1-darbas.js",
     "2-darbas" : "node --watch ./homework-Gabija/2-darbas.js",

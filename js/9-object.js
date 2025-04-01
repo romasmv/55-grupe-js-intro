@@ -127,3 +127,20 @@ const stud2 = {
 
 console.log(stud1.name);
 console.log(stud2.name);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
