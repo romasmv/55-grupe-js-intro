@@ -158,7 +158,6 @@ console.log(check(['what', 'a', 'great', 'kata'], 'kat')); //false);
 
 console.log('------------------');
 
-console.clear();
 
 /*
 Jei surašytume visus natūralius skaičius, mažesnius nei 10, kurie yra dalūs iš 3 arba 5, gautume: 3, 5, 6 ir 9. Šių skaičių suma yra 23.
@@ -188,7 +187,20 @@ function solution(number) {
 
 console.log(solution(10)); // 23
 
+console.log('------------------');
+
+console.clear();
 
 
+// Ši kata yra apie tam tikro skaičiaus padauginimą iš aštuonių, jei jis yra lyginis, ir iš devynių kitu atveju.
 
+function simpleMultiplication(number) {
+if (number % 2 === 0) {
+    return number * 8;
+  }else {
+    return number * 9;
+  }
+}
+
+console.log(simpleMultiplication(2));  
 
