@@ -9,6 +9,7 @@
     "math" : "node --watch ./js/10-math.js",
     "11-method-string" : "node --watch ./js/11-method-string.js",
     "object" : "node --watch ./js/9-object.js",
+    "0-darbas" : "node --watch ./homework-Gabija/0-darbas.js",
     "1-darbas" : "node --watch ./homework-Gabija/1-darbas.js",
     "2-darbas" : "node --watch ./homework-Gabija/2-darbas.js",
     "3-darbas" : "node --watch ./homework-Gabija/3-darbas.js",
