@@ -133,3 +133,48 @@ console.log(rastiIsskirti([1, 2, 3]));     // ---> 2
 console.log(rastiIsskirti([2,6,8,10,3]));  // ---> 3
 console.log(rastiIsskirti([0,0,3,0,0]));   // ---> 3
 console.log(rastiIsskirti([1,1,0,1,1]));   // ---> 0
+
+console.log('------------------');
+
+//Tau bus pateiktas masyvas a ir reikšmė x. Viskas, ką reikia padaryti – patikrinti, ar pateiktame masyve a yra reikšmė x.(a gali būti sudarytas iš skaičių arba tekstų (stringų).x taip pat gali būti arba skaičius, arba tekstas.)
+
+/* Grąžinti true, jeigu masyve yra ta reikšmė,
+ false, jeigu jos nėra. */
+
+
+function check(a, x) {
+for (let i = 0; i < a.length; i++) {
+    if (a[i] === x) {
+      return true;
+    }
+    }
+    return false;
+  }
+
+console.log(check([66, 101], 66)); //true);
+console.log(check([101, 45, 75, 105, 99, 107], 107)); //true);
+console.log(check(['t', 'e', 's', 't'], 'e')); //true);
+console.log(check(['what', 'a', 'great', 'kata'], 'kat')); //false);
+
+console.log('------------------');
+
+console.clear();
+
+/*
+Jei surašytume visus natūralius skaičius, mažesnius nei 10, kurie yra dalūs iš 3 arba 5, gautume: 3, 5, 6 ir 9. Šių skaičių suma yra 23.
+Baik sprendimą taip, kad jis grąžintų visų daugiklių iš 3 arba 5, kurie yra mažesni už pateiktą skaičių, sumą.
+Papildomai:
+Jei pateiktas skaičius yra neigiamas, grąžink 0.
+Pastaba:
+Jei skaičius dalijasi tiek iš 3, tiek iš 5, jį reikia suskaičiuoti tik vieną kartą.
+*/
+
+
+
+
+
+
+
+
+
+
