@@ -93,6 +93,43 @@ console.log(neutralise("-++-", "-+-+")); // "-+00"
 
 console.log('------------------');
 
+// Jums pateikiamas masyvas (kuris bus mažiausiai 3 ilgio, bet gali būti labai didelis), kuriame yra sveikieji skaičiai. Masyvą sudaro arba visiškai nelyginiai sveikieji skaičiai, arba visiškai lyginiai sveikieji skaičiai, išskyrus vieną sveikąjį skaičių N. Parašykite metodą, kuris masyvą priima kaip argumentą ir grąžina šį „išskirtinį“ N.
+
+// PVZ
+
+// [2, 4, 0, 100, 4, 11, 2602, 36] -->  11 (vienintelis nelyginis skaičius) 
+// [160, 3, 1719, 19, 11, 13, -21] --> 160 (vienintelis lyginis skaičius)
 
 
 
+// jeigu masyve visi visiškai nelyginiai sveikieji skaičiai +N;
+// jeigu masyve visi visiškai lyginiai sveikieji skaičiai +N;
+ 
+function rastiIsskirti(masyvas) {
+  let lyginiuKiekis = 0;
+  let nelyginiuKiekis = 0;
+  let paskutinisLyginis = 0;
+  let paskutinisNelyginis = 0;
+
+  for (let i = 0; i < masyvas.length; i++) {
+      if (masyvas[i] % 2 === 0) {
+          lyginiuKiekis++;
+          paskutinisLyginis = masyvas[i];
+      } else {
+          nelyginiuKiekis++;
+          paskutinisNelyginis = masyvas[i];
+      }
+  }
+
+  if (lyginiuKiekis === 1) {
+      return paskutinisLyginis;
+  } else {
+      return paskutinisNelyginis;
+  }
+}
+
+console.log(rastiIsskirti([0, 1, 2]));     // ---> 1
+console.log(rastiIsskirti([1, 2, 3]));     // ---> 2
+console.log(rastiIsskirti([2,6,8,10,3]));  // ---> 3
+console.log(rastiIsskirti([0,0,3,0,0]));   // ---> 3
+console.log(rastiIsskirti([1,1,0,1,1]));   // ---> 0
