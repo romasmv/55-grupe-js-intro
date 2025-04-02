@@ -26,6 +26,7 @@
     "biggest-number" : "node --watch ./task/biggest-number.js",
     "interval-count" : "node --watch ./task/interval-count.js",
     "string-reverse" : "node --watch ./task/string-reverse.js",
+    "valid-name" : "node --watch ./task/valid-name.js",
     "multiply" : "node --watch ./task/multiply.js",
     "digit-count" : "node --watch ./task/digit-count.js",
     "interval-sum" : "node --watch ./task/interval-sum.js",

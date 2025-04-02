@@ -189,8 +189,6 @@ console.log(solution(10)); // 23
 
 console.log('------------------');
 
-console.clear();
-
 
 // Ši kata yra apie tam tikro skaičiaus padauginimą iš aštuonių, jei jis yra lyginis, ir iš devynių kitu atveju.
 
@@ -204,3 +202,6 @@ if (number % 2 === 0) {
 
 console.log(simpleMultiplication(2));  
 
+console.log('------------------');
+
+console.clear();
