@@ -13,6 +13,7 @@
     "1-darbas" : "node --watch ./homework-Gabija/1-darbas.js",
     "2-darbas" : "node --watch ./homework-Gabija/2-darbas.js",
     "3-darbas" : "node --watch ./homework-Gabija/3-darbas.js",
+    "4-darbas" : "node --watch ./homework-Gabija/4-darbas.js",
     "array" : "node --watch ./js/6-array.js",
     "1-uzduotis" : "node --watch ./homework-Destitojas/1-uzduotis.js",
     "2-codewars" : "node --watch ./homework-Destitojas/2-codewars.js",
