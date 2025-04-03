@@ -1,3 +1,19 @@
+
+// abs - absoliuti reiksme
+// cbrt - kubinis saknis
+// ceil - apvalinimasi virsu
+// floor - apvalinimasi zemyn (apvalina iki sveiko skaiciaus(visda mapvalina zemin))
+// round - apvalinimas pagal taisykles
+// trunc - atmetimas sveikasis skaicius
+// hypot - Pitagoro teorema
+// max - didziausias skaicius
+// min - maziausias skaicius
+// pow - pakelimas laipsniu
+// sign - zenklas (arba teigiamas(1) arba neigiamas skaicius(-1))
+// sqrt - kvadratinis saknis
+// random - atsitiktinis skaicius [0..1)
+
+
 console.log(Math.E);
 console.log(Math.PI);
 console.log(Math.SQRT2);
