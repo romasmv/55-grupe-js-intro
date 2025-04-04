@@ -602,20 +602,106 @@ function paskutineRaide(zodis) {
  console.log(paskutineRaide('labas'));
  
  console.log('--------------'); 
-// console.clear();
-//25. Parašykite funkciją, kuri patikrina, ar žodis prasideda raide „A“.
+ console.clear();
 
+ //25. Parašykite funkciją, kuri patikrina, ar žodis prasideda raide „A“.
 
+ function pirmojiRaideYraA(zodis) {
+    if (zodis[0] === 'A') {
+        return  'Taip žodis prasideda raide A'
+    } else {
+        return `Ne žodis prasideda raide ${zodis[0]}`
+    }
+    
+ }
+ console.log(pirmojiRaideYraA('Arbuzas'));
+ console.log(pirmojiRaideYraA('Bananas'));
+ 
+ console.log('--------------'); 
+ console.clear();
+ 
+ //26. Parašykite funkciją, kuri grąžina žodžio ilgį.
+
+ function grazinaZodzioIlgi(zodis) {
+    return zodis.length
+ }
+ console.log(grazinaZodzioIlgi('labas'));
+ 
+ console.log('--------------'); 
+ console.clear();
+ 
+ //27. Parašykite funkciją, kuri grąžina „Ilgas“ arba „Trumpas“, priklausomai nuo žodžio ilgio. Ilgas žodis yra 7 simbolių ilgio arba didesnis, o trumpas yra 6 simbolių ilgio arba trumpesnis
+
+ function paliginaZodzioIlgi(zodis) {
+    if (zodis.length>=7) {
+        return `Ilgas, jo ilgis ${zodis.length} raidziu.`
+    } else {
+        return `Trumpas, nes jo ilgis tik ${zodis.length} raidziu.`
+    }
+    
+ }
+ console.log(paliginaZodzioIlgi('labasrytas'));
+ console.log(paliginaZodzioIlgi('labuka'));
+ 
+ console.log('--------------'); 
+ console.clear();
+ 
+ //28. Parašykite funkciją, kuri patikrina, ar du žodžiai yra vienodi.
+ 
+ function arZodziaiVienodi(zodis1,zodis2) {
+    if (zodis1===zodis2) {
+        return `Taip du žodžiai yra vienodi`
+    } else {
+        return `Ne du žodžiai nera vienodi`
+    }
+    
+ }
+ console.log(arZodziaiVienodi('labas','labas'));
+ console.log(arZodziaiVienodi('labas','rytas'));
+ 
+ console.log('--------------'); 
+ console.clear();
+ 
+ //29. Parašykite funkciją, kuri grąžina „Diena“ arba „Naktis“, priklausomai nuo perduotos valandos (0–23). Diena 7-19 (kai saule pakilus ), Naktis 19 -7 (kai saule nusileido)
+ 
+ function dienaArNaktis(laikas) {
+    if (laikas>=7&&laikas<=19) {
+        return 'Diena'
+    } else {
+        return 'Naktis'
+    }
+    
+ }
+ console.log(dienaArNaktis(8));
+ console.log(dienaArNaktis(20));
+ 
+ console.log('--------------'); 
+console.clear();
+ 
 /*
-26. Parašykite funkciją, kuri grąžina žodžio ilgį.
-27. Parašykite funkciją, kuri grąžina „Ilgas“ arba „Trumpas“, priklausomai nuo žodžio ilgio. Ilgas žodis yra 7 simbolių ilgio arba didesnis, o trumpas yra 6 simbolių ilgio arba trumpesnis
-28. Parašykite funkciją, kuri patikrina, ar du žodžiai yra vienodi.
-29. Parašykite funkciją, kuri grąžina „Diena“ arba „Naktis“, priklausomai nuo perduotos valandos (0–23).
 30. Parašykite vieną funkciją, kuri patikrina skaičiaus vertę, ir jęi:
-a. Skaičius yra teigiamas, išveda į console ‘esu teigiamas’
+a. Skaičius yra teigiamas, išveda į console ‘esu teigiamas’  ???
 b. Skaičius yra neigiamas, išveda į console ‘esu neigiamas’
 c. Skaičius yra nulis, išveda į console ‘esu nulis’
 d. Skaičius yra didesnis už 100, išveda ‘didžiulis skaičius’
 e. Jei skaičius nėra didesnis už 100, išveda ‘esu mažiukas
-
 */
+
+function vienaFunkcija(skaicius) {
+    if (skaicius===0) {               //Skaičius yra nulis, išveda į console ‘esu nulis’
+        return  'esu nulis, esu teigiamas'
+    } else if (skaicius>100) {        //Skaičius yra didesnis už 100, išveda ‘didžiulis skaičius’
+        return  'didžiulis skaičius, esu teigiamas'
+    }  else if (skaicius>0 && skaicius<100) {       //Jei skaičius nėra didesnis už 100, išveda ‘esu mažiukas
+        return  'esu mažiukas, esu teigimas' 
+    } else {
+        return  'esu neigiamas,'
+    } 
+}
+console.log(vienaFunkcija(5));
+console.log(vienaFunkcija(-3));
+console.log(vienaFunkcija(0));
+console.log(vienaFunkcija(102));
+console.log(vienaFunkcija(10));
+
+
