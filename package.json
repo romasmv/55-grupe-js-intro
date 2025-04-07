@@ -27,6 +27,7 @@
     "number" : "node --watch ./js/1-number.js",
     "js": "node ./index.js",
     "adult" : "node --watch ./task/adult.js",
+    "fancy-math" : "node --watch ./task/fancy-math.js",
     "biggest-number" : "node --watch ./task/biggest-number.js",
     "interval-count" : "node --watch ./task/interval-count.js",
     "string-reverse" : "node --watch ./task/string-reverse.js",
