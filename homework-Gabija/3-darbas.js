@@ -5,14 +5,14 @@
     
     let miestuSarasas = [
       'Kaunas', 102.5,
-      'Klaipėda', 311.4,
-      'Šiauliai', 214.6,
-      'Panevėžys', 135.2,
+      'Klaipeda', 311.4,
+      'Siauliai', 214.6,
+      'Panevezys', 135.2,
       'Alytus', 105.4,
-      'Marijampolė', 139.7,
+      'Marijampole', 139.7,
       'Utena', 96.8,
-      'Telšiai', 278.9,
-      'Tauragė', 225.6,
+      'Telsiai', 278.9,
+      'Taurage', 225.6,
       'Druskininkai', 129.3
  ];
  
@@ -96,8 +96,8 @@ console.clear();
 // d. Susikurkite sąrašą kelio sąlygoms iki kiekvieno miesto apibūdinti (pavyzdžiui: geras, prastas, taisomas). Geromis kelio sąlygomis iki miesto važiuojame paprastai, prastomis kelio sąlygomis iki miesto važiuojame 1.5 karto ilgiau, o taisomo kelio sąlygomis važiuojame 2 kartus ilgiau. Parašykite funkciją, kuri pagal kelio sąlygas ir duotus atstumus, parašytų kiek laiko tektų važiuoti iki kiekvieno miesto. 
 
 /*   let miestuSarasas = [
-     'Kaunas', 102.5,
-     'Klaipėda', 311.4,
+    'Kaunas', 102.5,
+    'Klaipėda', 311.4,
     'Šiauliai', 214.6,
     'Panevėžys', 135.2,
     'Alytus', 105.4,
@@ -107,19 +107,46 @@ console.clear();
     'Tauragė', 225.6,
     'Druskininkai', 129.3 ];   */
 
+      // geras =  važiuojame paprastai
+  // prastomis = 1.5 karto ilgiau
+     //taisomo = 2 kartus ilgiau
 
-
+     function kiekLaikoVaziuoti(kelioSalyga, miestas) {
+      let laikas = 0;
+      let vidutinisGreitis = 100;
+    
+      for (let i = 0; i < miestuSarasas.length; i += 2) {
+        if (miestuSarasas[i] === miestas) {
+          let atstumas = miestuSarasas[i + 1];
+    
+          if (kelioSalyga === 'geras') {
+            laikas = atstumas / vidutinisGreitis;
+          } else if (kelioSalyga === 'prastas') {
+            laikas = (atstumas / vidutinisGreitis) * 1.5;
+          } else if (kelioSalyga === 'taisomas') {
+            laikas = (atstumas / vidutinisGreitis) * 2;
+          } else {
+            return 'Nera tokios salygos';
+          }
+    
+          return `Vaziuoti iki ${miestas} uztruks ${laikas.toFixed(2)} val.`;
+        }
+      }
+    
+      return 'Toks miestas nerastas';
+    }
+     
+     console.log(kiekLaikoVaziuoti('prastas','Klaipeda'));
+     //console.clear();
+     
     
 
 
-   // 2. Parašyti funkciją, kuri apskaičiuotų kiek sveikųjų teigiamų skaičių sąraše yra tam tikrų skaičių ir išvestų resultatą grafiškai. PVZ: turint sąrašą [1, 1, 2, 3, 3, 3, 4] rezultatas būtų gaunamas toks:
 
 
 
 
-
-
-
+     // 2. Parašyti funkciją, kuri apskaičiuotų kiek sveikųjų teigiamų skaičių sąraše yra tam tikrų skaičių ir išvestų resultatą grafiškai. PVZ: turint sąrašą [1, 1, 2, 3, 3, 3, 4] rezultatas būtų gaunamas toks:
 
 
 /* 3. Susikurkite 7 sąrašus, kuriose yra talpinamos skirtingų dienų temperatūros vertės
