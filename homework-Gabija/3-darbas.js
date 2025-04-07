@@ -137,16 +137,33 @@ console.clear();
     }
      
      console.log(kiekLaikoVaziuoti('prastas','Klaipeda'));
-     //console.clear();
+     console.clear();
      
-    
+// 2. Parašyti funkciją, kuri apskaičiuotų kiek sveikųjų teigiamų skaičių sąraše yra tam tikrų skaičių ir išvestų resultatą grafiškai. PVZ: turint sąrašą [1, 1, 2, 3, 3, 3, 4] rezultatas būtų gaunamas toks:
+
+let sarasasSkaiciu = [1, 1, 2, 3, 3, 3, 4];
+function kiekTamTikruSkaiciu(sarasSkaiciu) {
+  let stars = '';
+  for (let i = 0; i < sarasSkaiciu.length; i++) {
+  if (sarasSkaiciu[i] === sarasSkaiciu[i+1]){
+    stars += '*'; 
+   }  
+   }
+   return stars;
+}
+
+//console.log(kiekTamTikruSkaiciu(stars));
 
 
 
+/*for (let i = 1; i <= 5; i++) {
+    let stars = '' ;
+    for (let j = 0; j < i; j++) {
+    stars += '*';  
+    }
+    console.log(stars);
+    ;*/
 
-
-
-     // 2. Parašyti funkciją, kuri apskaičiuotų kiek sveikųjų teigiamų skaičių sąraše yra tam tikrų skaičių ir išvestų resultatą grafiškai. PVZ: turint sąrašą [1, 1, 2, 3, 3, 3, 4] rezultatas būtų gaunamas toks:
 
 
 /* 3. Susikurkite 7 sąrašus, kuriose yra talpinamos skirtingų dienų temperatūros vertės
