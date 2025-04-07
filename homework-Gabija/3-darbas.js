@@ -67,6 +67,34 @@ console.clear();
 
 //c. Parašykite funkciją, kuri nurodytų į kokį tolimiausią miestą mes galėtume nuvažiuoti su k kiekiu pinigų, jei už vieną litrą degalų turime mokėti j eurų. Kelionę pradedame su 30 litrų benzino bakelyje, už kuriuos mokėti nereikia. Nuvažiuodami vieną kilometrą sudeginame x kiekį degalų
 
+
+function koksTolimiausiasMiestas(kuroKaina,pinigai) {
+  let pradedameKelione = 30;
+  let masinosSanaudos = 12;//litru kiekis / nuvaziuoto atstumo
+  let rezultatas = '';
+  for (let i = 0; i < miestuSarasas.length; i+=2) {
+    if (miestuSarasas[i+1]<=(((pinigai/kuroKaina)+pradedameKelione)/masinosSanaudos)*100) {
+      if (rezultatas === '') {
+        rezultatas = `${miestuSarasas[i]} (${miestuSarasas[i + 1]} km)`;
+      } else {
+        rezultatas += `, ${miestuSarasas[i]} (${miestuSarasas[i + 1]} km)`;
+      }
+    }
+  }
+  
+  if (rezultatas === '') {
+    return `Uz ${pinigai} euru negalėtume nuvažiuoti į jokį miestą.`;
+  }
+  
+  return `Uz ${pinigai} euru nuvažiuotume į šiuos miestus: ${rezultatas}.`;
+}
+
+
+console.log(koksTolimiausiasMiestas(1.5,0));
+console.clear();
+
+// d. Susikurkite sąrašą kelio sąlygoms iki kiekvieno miesto apibūdinti (pavyzdžiui: geras, prastas, taisomas). Geromis kelio sąlygomis iki miesto važiuojame paprastai, prastomis kelio sąlygomis iki miesto važiuojame 1.5 karto ilgiau, o taisomo kelio sąlygomis važiuojame 2 kartus ilgiau. Parašykite funkciją, kuri pagal kelio sąlygas ir duotus atstumus, parašytų kiek laiko tektų važiuoti iki kiekvieno miesto. 
+
 /*   let miestuSarasas = [
      'Kaunas', 102.5,
      'Klaipėda', 311.4,
@@ -79,36 +107,9 @@ console.clear();
     'Tauragė', 225.6,
     'Druskininkai', 129.3 ];   */
 
-function koksTolimiausiasMiestas(kuroKaina,pinigai) {
-  let pradedameKelione = 30;
-  let masinosSanaudos = 12;//litru kiekis / nuvaziuoto atstumo
-  let rezultatas = '';
-  for (let i = 0; i < miestuSarasas.length; i+=2) {
-    if (miestuSarasas[i+1]<=(((pinigai/kuroKaina)+pradedameKelione)/masinosSanaudos)*100) {
-      if (rezultatas === '') {
-        rezultatas = `${miestuSarasas[i]} (${miestuSarasas[i + 1]} km)`;
-      } else {
-        rezultatas += `, ${miestuSarasas[i]} (${miestuSarasas[i + 1]} km)`;
-          }
-        }
-      }
-      
-      if (rezultatas === '') {
-        return `Uz ${pinigai} euru negalėtume nuvažiuoti į jokį miestą.`;
-      }
-      
-      return `Uz ${pinigai} euru nuvažiuotume į šiuos miestus: ${rezultatas}.`;
-    }
 
 
-console.log(koksTolimiausiasMiestas(1.5,0));
-
-
-
-
-// d. Susikurkite sąrašą kelio sąlygoms iki kiekvieno miesto apibūdinti (pavyzdžiui: geras, prastas, taisomas). Geromis kelio sąlygomis iki miesto važiuojame paprastai, prastomis kelio sąlygomis iki miesto važiuojame 1.5 karto ilgiau, o taisomo kelio sąlygomis važiuojame 2 kartus ilgiau. Parašykite funkciją, kuri pagal kelio sąlygas ir duotus atstumus, parašytų kiek laiko tektų važiuoti iki kiekvieno miesto. 
-
-
+    
 
 
    // 2. Parašyti funkciją, kuri apskaičiuotų kiek sveikųjų teigiamų skaičių sąraše yra tam tikrų skaičių ir išvestų resultatą grafiškai. PVZ: turint sąrašą [1, 1, 2, 3, 3, 3, 4] rezultatas būtų gaunamas toks:
