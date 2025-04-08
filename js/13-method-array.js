@@ -14,8 +14,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // list.reverse() - apvercia masyvo elementus
 // list.concat(masyvo pav.) - sujungia masyvus i viena
 // list.splice(index po kurio istrinti, kiekis kiek istrinti) - istrina elementus is masyvo
-
-
+// list.map - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo
+// list.filter - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo pagal nurodyta salyga
 
 
 const list = [];
@@ -169,13 +169,105 @@ console.log(h);
 h.splice(1, 2);
 console.log(h);
 
+console.clear();
+
+// map - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo
+
+const k =[10, 2, 8, 4, 6]
+const k2 = [];
 
 
+for (const number of k) {
+    k2.push(number * 2);
+}
+function triple(number) {
+    return number * 3;
+}
+
+const k3 = k.map(triple);
+console.log(k3);
 
 
+const quadro =  n => n * 4;
+
+const k4 = k.map(quadro);
+console.log(k4);
+
+const k5 = k.map(n => n * 5);
+console.log(k5);
+
+const k6 = k.map(n => n );
+console.log(k6);
+
+const k7 = k.map(n => n + 1);
+console.log(k7);
 
 
+console.log('----------------------');
 
+
+const dict = ['pomidoras', 'agurkas', 'bulve', 'svogunas'];
+
+const dict2 = dict.map(w => w[0]);
+console.log(dict2);
+
+const dict3 = dict.map(w => w.length);
+console.log(dict3);
+
+const people = [
+    { name: 'Jonas', age: 99 },
+    { name: 'Maryte', age: 88 },
+    { name: 'Petras', age: 77 },
+    { name: 'Ona', age: 66 },
+];
+
+const people100 = people.map(person =>
+    `${person.name} liko ${100 - person.age} metai.`);
+console.log(people100);
+
+const peopleNames = people.map(person => person.name);
+console.log(peopleNames);
+
+const peopleAges = people.map(person => person.age);
+console.log(peopleAges);
+
+const peopleMarried = people.map(person => {
+    person.isMarried = true;
+    person.luckyNumber = 13;
+    return person;
+});
+console.log(peopleMarried);
+
+console.clear();
+
+// filter - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo pagal nurodyta salyga
+
+const p = [10, 2, 8, 4, 6];
+const p5 = [];
+
+for (const n of p) {
+    if (n > 5) {
+        p5.push(n);
+    }
+}
+
+console.log(p5);
+
+const p6 = p.filter(n => n > 6);
+console.log(p6);
+
+const p7 = p.filter(n => n <= 7);
+console.log(p7);
+
+const p8 = p.filter(n => n > 2 && n < 8);
+console.log(p8);
+
+const texts5 = ['labas', '', 'rytas', '', 'Lietuva'];
+const texts5Updated = texts5.filter(t => t.length > 0);
+console.log(texts5Updated);
+
+const texts5Updated2 = texts5.filter(t => t);
+console.log(texts5Updated2);
 
 
 
