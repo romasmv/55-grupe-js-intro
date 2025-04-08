@@ -207,11 +207,11 @@ console.log('------------------');
 console.clear();
 
 let v1 = 50,
-    v2 = 100,
-    v3 = 150,
-    v4 = 200,
-    v5 = 2,
-    v6 = 250;
+v2 = 100,
+v3 = 150,
+v4 = 200,
+v5 = 2,
+v6 = 250;
 
 function equal1(a,b){
   return a + b;
@@ -232,7 +232,7 @@ console.log(equal3(v5,v1))
 
 
 function equal4(a,b){
-    return a / b;
+  return a / b;
 }
 console.log(equal4(v4,v5))
 
@@ -240,3 +240,157 @@ console.log(equal4(v4,v5))
 function equal5(a,b){
   return a % b;
 }console.log(equal5(v6,v3))
+
+
+console.log('------------------');
+console.clear();
+
+/*Troliai puola tavo komentarų skiltį!
+Įprastas būdas išspręsti šią situaciją yra pašalinti visas balses iš trolių komentarų, neutralizuojant grėsmę.
+Jūsų užduotis yra parašyti funkciją, kuri paima eilutę, ir grąžinti naują eilutę su pašalintomis balsėmis.
+Pavyzdžiui, eilutė "Ši svetainė skirta nevykėliams LOL!" taptų "Ths wbst s fr lsrs LL!".
+Pastaba: šiai kata y nelaikoma balsiu.*/
+
+function disemvowel(str) {
+  let vowels =['a','o','e','i','u']
+  let newText = '';
+  
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i].toLowerCase())) {
+      newText += '';}
+      else {
+        newText+=str[i];
+      }
+    }
+    
+    
+    return newText;
+  }
+  
+  console.log(disemvowel("This website is for losers LOL!")) //"Ths wbst s fr lsrs LL!")
+  console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read")) //"N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
+  console.log(disemvowel("What are you, a communist?")) // "Wht r y,  cmmnst?")
+  
+  console.log('------------------');
+  console.clear();
+  
+  /* Jums bus suteiktas masyvas a ir reikšmė x. Viskas, ką jums reikia padaryti, tai patikrinti, ar pateiktame masyve yra reikšmė.
+  a gali būti skaičių arba eilučių. x gali būti bet kuris.
+  Grąžina true jei masyve yra reikšmė, false jei nera.*/
+  
+   function check(a, x) { 
+     if (a.includes(x)) {
+       return true}
+        else {
+          return false;
+        }
+      }
+      
+      
+      console.log(check([66, 101],66))                        // true);
+      console.log(check([101, 45, 75, 105, 99, 107],107))      // true);
+      console.log(check(['t', 'e', 's', 't'],'e'))             // true);
+      console.log(check(['what', 'a', 'great', 'kata'],'kat')) //  false);
+      
+      console.log('------------------');
+      console.clear();
+      
+      /*   Jūsų darbas
+      Raskite visų žemiau m esančių n kartotinių sumą
+      
+      Turėkite omenyje
+      n ir m yra natūralūs skaičiai (teigiami sveikieji skaičiai)
+      m yra išbrauktas iš sumos
+      Pavyzdžiai
+      sumaMul(2, 9) ==> 2 + 4 + 6 + 8 = 20
+      sumaMul(3, 13) ==> 3 + 6 + 9 + 12 = 30
+      sumaMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+      sumMul(4, -7) ==> "INVALID"   */
+      
+      function sumMul(n,m){
+        if (n<=0 || m<=0 || !Number.isInteger(n) || !Number.isInteger(m)){
+          return "INVALID";
+  }
+  let sum = 0;
+  for (let i = 1; i < m; i++) {
+    if (i % n === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(sumMul(0,0))   //"INVALID");
+console.log(sumMul(2,9))  //20);
+console.log(sumMul(4,-7)) //"INVALID");
+
+console.log('------------------');
+console.clear();
+
+/*
+Vaikai geria toddy.
+Paaugliai geria kokakolą.
+Jauni suaugusieji geria alų.
+Suaugusieji geria viskį.
+Sukurkite funkciją, kuri gautų amžių, ir grąžinkite tai, ką jie geria.
+
+Taisyklės:
+
+Vaikai iki 14 metų.
+Paaugliai iki 18 metų.
+Jaunas iki 21 m.
+Suaugusieji turi 21 ar daugiau.
+Pavyzdžiai: (įvestis --> išvestis)
+
+13 --> "gerti toddy"
+17 --> "gerti kokakolą"
+18 --> "gerti alų"
+20 --> "gerti alų"
+30 --> "gerti viskį"
+*/
+
+function peopleWithAgeDrink(old) {
+  if (old<14) {
+    return 'drink toddy'
+  }
+  else if (old<18){
+    return 'drink coke'
+  }
+  else if (old<21){
+    return 'drink beer'
+  }
+  else{
+    return  'drink whisky'
+  }
+}
+
+console.log((peopleWithAgeDrink(22)))   //'drink whisky'  
+
+console.log('------------------');
+console.clear();
+
+
+/*
+Duotas skaičius n. Grąžink teigiamų nelyginių skaičių, mažesnių už n, kiekį.
+
+Pavyzdžiai (Įvestis -> Išvestis):
+
+7 -> 3 (nes nelyginiai skaičiai mažesni už 7 yra [1, 3, 5])
+15 -> 7 (nes nelyginiai skaičiai mažesni už 15 yra [1, 3, 5, 7, 9, 11, 13])
+Taip pat nurodyta, kad tikimasi didelių įvesties skaičių, todėl reikėtų parašyti efektyvų sprendimą.
+*/
+function oddCount(n){
+let count = 0;
+for (let i = 1; i < n; i++) {
+  if (i%2===1){
+  count++
+  }
+}
+return count
+}
+
+
+console.log(oddCount(15))    // 7, "Oops! Wrong.");
+console.log(oddCount(15023)) // 7511, "Oops! Wrong.");
+
+
