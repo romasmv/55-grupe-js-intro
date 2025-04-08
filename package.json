@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "for" : "node --watch ./js/8-for.js",
+    "15-ternary" : "node --watch ./js/15-ternary.js",
     "14-arrow" : "node --watch ./js/14-arrow.js",
     "typeof" : "node --watch ./js/7-typeof.js",
     "math" : "node --watch ./js/10-math.js",

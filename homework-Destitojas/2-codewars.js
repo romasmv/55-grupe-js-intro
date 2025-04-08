@@ -205,3 +205,38 @@ console.log(simpleMultiplication(2));
 console.log('------------------');
 
 console.clear();
+
+let v1 = 50,
+    v2 = 100,
+    v3 = 150,
+    v4 = 200,
+    v5 = 2,
+    v6 = 250;
+
+function equal1(a,b){
+  return a + b;
+}
+console.log(equal1(v1,v1))
+
+
+function equal2(a,b){
+  return a - b;
+}
+console.log(equal2(v3,v1))
+
+
+function equal3(a,b){
+  return a * b;
+}
+console.log(equal3(v5,v1))
+
+
+function equal4(a,b){
+    return a / b;
+}
+console.log(equal4(v4,v5))
+
+
+function equal5(a,b){
+  return a % b;
+}console.log(equal5(v6,v3))
