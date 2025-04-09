@@ -14,16 +14,16 @@
     - metodai:
       - Math methods
       - ~~string methods~~
-      - number methods
+      - ~~number methods~~
       - array methods
-      - object methods
+      - ~~object methods~~
 -   palyginimas:
     - ~~if~~
-    - ternary
+    - ~~ternary~~
     - switch
 -   ciklas:
     - ~~for~~
-    - while
-    - for-of
-    - for-in
+    - ~~while~~
+    - ~~for-of~~
+    - ~~for-in~~
 -   ivykiu stebejimas (event listeners):

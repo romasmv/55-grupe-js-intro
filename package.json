@@ -8,6 +8,8 @@
     "16-for-of" : "node --watch ./js/16-for-of.js",
     "18-for-in" : "node --watch ./js/18-for-in.js",
     "19-sort" : "node --watch ./js/19-sort.js",
+    "20-reduce" : "node --watch ./js/20-reduce.js",
+    "21-destrukturizavimas-rest" : "node --watch ./js/21-destrukturizavimas-rest.js",
     "17-while" : "node --watch ./js/17-while.js",
     "15-ternary" : "node --watch ./js/15-ternary.js",
     "14-arrow" : "node --watch ./js/14-arrow.js",
