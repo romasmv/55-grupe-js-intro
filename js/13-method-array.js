@@ -4,18 +4,24 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 */
 
-// list.push(item) - prideda prie masyvo pabaigos
-// list.pop() - istrina paskutini masyvo elementa
-// list.unshift(item) - prideda prie masyvo pradzios
-// list.shift() - istrina pirma masyvo elementa
-// list.includes(item) - patikrina ar masyve yra elementas
-// list.indexOf(item) - grazina elemento indeksa masyve
-// list.join('zenklas tarp masyvo elementu') - sujungia masyvo elementus i viena stringa
-// list.reverse() - apvercia masyvo elementus
-// list.concat(masyvo pav.) - sujungia masyvus i viena
-// list.splice(index po kurio istrinti, kiekis kiek istrinti) - istrina elementus is masyvo
-// list.map - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo
-// list.filter - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo pagal nurodyta salyga
+// .push() - prideda prie masyvo pabaigos
+// .pop() - istrina paskutini masyvo elementa
+// .unshift() - prideda prie masyvo pradzios
+// .shift() - istrina pirma masyvo elementa
+// .includes() - patikrina ar masyve yra elementas
+// .indexOf() - grazina elemento indeksa masyve
+// .join('zenklas tarp masyvo elementu') - sujungia masyvo elementus i viena stringa
+// .reverse() - apvercia masyvo elementus
+// .concat(masyvo pav.) - sujungia masyvus i viena
+// .splice(index po kurio istrinti, kiekis kiek istrinti) - istrina elementus is masyvo
+// .map - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo
+// .filter - sukuria nauja masyva, kurio elementai yra gauti is pradinio masyvo pagal nurodyta salyga
+// .fill(value, start, end) - uzpildo masyva nurodyta verte
+// .every - grazina true arba false, ar visi masyvo elementai atitinka nurodyta salyga
+// .some - grazina true arba false, ar bent vienas masyvo elementas atitinka nurodyta salyga
+// .sort - surikiuoja masyvo elementus
+// .reduce - grazina viena verte, kuri yra gauta is masyvo elementu
+
 
 
 const list = [];
@@ -269,6 +275,50 @@ console.log(texts5Updated);
 const texts5Updated2 = texts5.filter(t => t);
 console.log(texts5Updated2);
 
+
+console.clear();
+
+// fill(value, start, end) - uzpildo masyva nurodyta verte
+const default5 = [0, 0, 0, 0, 0];
+const default7 = Array(7).fill(99);
+console.log(default7);
+
+const zeros = Array(10);
+const zeros2 = Array(10).fill(0);
+console.log(zeros);
+console.log(zeros2);
+
+const neegativees = Array(8).fill(false);
+console.log(neegativees);
+
+const eemptySpacees = Array(40).fill('');
+console.log(eemptySpacees);
+
+const labas5 = Array(5).fill('labas');
+console.log(labas5);
+
+const demo = [10, 2, 8, 4, 6];
+console.log(demo);
+
+demo.fill(777);
+console.log(demo);
+
+console.clear();
+
+// every - grazina true arba false, ar visi masyvo elementai atitinka nurodyta salyga
+const trees = ['uosis', 'egle', 'azuolas', 'tuopa'];
+const allTreesValid = trees.every(s => s.length > 0);
+console.log(allTreesValid);
+
+const allTreesNameSize5 = trees.every(s => s.length === 5);
+console.log(allTreesNameSize5);
+
+// some - grazina true arba false, ar bent vienas masyvo elementas atitinka nurodyta salyga
+const someTreesValid = trees.some(s => s.length > 0);
+console.log(someTreesValid);
+
+const someTreesNameSize5 = trees.some(s => s.length === 5);
+console.log(someTreesNameSize5);
 
 
 
