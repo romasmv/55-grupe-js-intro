@@ -425,10 +425,41 @@ console.log(past(1,0,1)) //,3601000
 console.log(past(1,0,0)) //,3600000
 
 
+console.log('------------------');
+console.clear();
 
+/*
+Dezoksiribonukleino rūgštis (DNR) yra cheminė medžiaga, randama ląstelių branduolyje ir nešanti gyvų organizmų vystymosi ir funkcionavimo „instrukcijas“.
+DNR eilutėse simboliai „A“ ir „T“ yra vienas kito papildymai, kaip „C“ ir „G“. Jūsų funkcija gauna vieną DNR pusę (eilutę, išskyrus Haskell); reikia grąžinti kitą papildomą pusę. DNR grandinė niekada nebūna tuščia arba jos visai nėra (vėlgi, išskyrus Haskell).
 
+Pavyzdys: ( įvestis --> išvestis )
 
+"ATTGC" --> "TAACG"
+"GTAT" --> "CATA"
+*/
 
+function dnaStrand(dna){
+  let result = '';
+   for(let i=0;i<dna.length;i++){
+   if(dna[i] === 'A'){
+    result +='T';
+   }
+    if (dna[i] === 'T'){
+    result += 'A';
+   }
+    if (dna[i] === 'C'){
+    result += 'G';
+   }
+    if (dna[i] === 'G'){
+    result += 'C';
+   }
+  }
+  return result ;
+ }
+
+ console.log(dnaStrand("AAAA")) //,"TTTT","String AAAA is")
+ console.log(dnaStrand("ATTGC")) //,"TAACG","String ATTGC is")
+ console.log(dnaStrand("GTAT"))//,"CATA","String GTAT is")
 
 
 
