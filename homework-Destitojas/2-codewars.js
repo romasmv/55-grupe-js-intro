@@ -380,17 +380,58 @@ Pavyzdžiai (Įvestis -> Išvestis):
 Taip pat nurodyta, kad tikimasi didelių įvesties skaičių, todėl reikėtų parašyti efektyvų sprendimą.
 */
 function oddCount(n){
-let count = 0;
-for (let i = 1; i < n; i++) {
-  if (i%2===1){
-  count++
+  let count = 0;
+  for (let i = 1; i < n; i++) {
+    if (i%2===1){
+      count++
+    }
   }
-}
-return count
+  return count
 }
 
 
 console.log(oddCount(15))    // 7, "Oops! Wrong.");
 console.log(oddCount(15023)) // 7511, "Oops! Wrong.");
+
+console.log('------------------');
+console.clear();
+
+/*  Laikrodis rodo h valandas, m minutes ir s sekundes po vidurnakčio.
+
+Jūsų užduotis yra parašyti funkciją, kuri grąžina laiką nuo vidurnakčio milisekundėmis.
+
+Pavyzdys:
+h = 0
+m = 1
+s = 1
+
+result = 61000
+Įvesties apribojimai:
+
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59      */
+
+function past(h, m, s){
+  return(((h*3600)+(m*60)+s)*1000)
+}
+
+
+
+console.log(past(0,1,1)) //,61000
+console.log(past(1,1,1)) //,3661000
+console.log(past(0,0,0)) //,0
+console.log(past(1,0,1)) //,3601000
+console.log(past(1,0,0)) //,3600000
+
+
+
+
+
+
+
+
+
+
 
 
