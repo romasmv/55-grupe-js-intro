@@ -21,7 +21,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // .some - grazina true arba false, ar bent vienas masyvo elementas atitinka nurodyta salyga
 // .sort - surikiuoja masyvo elementus
 // .reduce - grazina viena verte, kuri yra gauta is masyvo elementu
-
+// .random - grazina atsitiktini skaiciu is nurodyto intervalo
 
 
 const list = [];
