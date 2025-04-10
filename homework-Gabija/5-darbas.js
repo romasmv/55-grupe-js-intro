@@ -1,7 +1,7 @@
 //1. užd. Padarykite funkciją, kuriai perdavus vieną iš (akmuo, popierius, šulinys) reikšmių, kompiuteris su jumi sužaistų vaskiči raundą ir išvestų rezultatą į console. Kompiuterio pasirinkimai turi būti atsitiktiniai.
  
-//. random metodas gali būti naudojamas atsitiktiniam pasirinkimui. Pvz: Math.floor(Math.random() * 3) - tai bus skaičius nuo 0 iki 2, kurį galima panaudoti kaip indeksą masyve.
-//pvz 
+//. random metodas gali būti naudojamas atsitiktiniam pasirinkimui. pvz: Math.floor(Math.random() * 10) + 1; - tai sugeneruos atsitiktinį skaičių nuo 1 iki 10. *10 - tai skaičius, kurį norite sugeneruoti. +1 - tai skaičius, nuo kurio norite pradėti. pvz: 1-10, 0-9, 5-15 ir t.t.
+ 
 
 function rockPaperScissors(manoPasirinkimas) {
  const variantai = ['akmuo', 'popierius', 'šulinys'];
@@ -101,3 +101,19 @@ console.clear();
 
 //uzd 4. Kalėdų senelis pakeitė darbą ir tapo gimtadienio dėde. Vietoj gerų ir blogų vaikų, jis dosniai apdovanoja ypatingus gimtadienius (1, 5, 10, 15, 16, 18, 20 ir visi kiti jubiliejai) ir nelabai gerai apdovanoja paprastus gimtadienius. Padarykite du sąrašus - vieną su nuostabiomis dovanomis (vienaragis, pilis, mašina, ...), kitą su nefainomis dovanomis (kojinės, ananasas, jau skaityta knyga, ...). Padarykite funkciją, kuriai pateikus jūsų metus, ji pasveikins su gimtadieniu ir padovanos atitinkamą dovaną.
 
+function kuriDovana(amzius) {
+    let jubiliejai = [1, 5, 10, 15, 16, 18, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    let geraDovana = ['vienaragis','pilis','mašina'];
+    let blogaDovana = ['kojinės', 'ananasas', 'jau skaityta knyga'];
+for (let i = 1; i < jubiliejai.length; i++) {
+     if (amzius === jubiliejai[i]){
+     return geraDovana[Math.floor(Math.random() * geraDovana.length)];
+    } 
+    
+}
+return blogaDovana[Math.floor(Math.random() * blogaDovana.length)];
+}
+
+console.log(kuriDovana(20)); // Jubiliejus - gera dovana
+console.log(kuriDovana(5));  // Jubiliejus - gera dovana
+console.log(kuriDovana(7));  // Ne jubiliejus - bloga dovana
