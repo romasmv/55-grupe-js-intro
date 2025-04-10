@@ -37,3 +37,14 @@ function correctSentence(text) {
 }
 
 console.log(correctSentence('Siuo metu klaseje yra: jonas, Maryte, peTRas, ONA.'));
+
+
+
+
+
+
+
+
+
+
+

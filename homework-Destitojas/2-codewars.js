@@ -440,27 +440,99 @@ Pavyzdys: ( įvestis --> išvestis )
 
 function dnaStrand(dna){
   let result = '';
-   for(let i=0;i<dna.length;i++){
-   if(dna[i] === 'A'){
-    result +='T';
-   }
+  for(let i=0;i<dna.length;i++){
+    if(dna[i] === 'A'){
+      result +='T';
+    }
     if (dna[i] === 'T'){
-    result += 'A';
-   }
+      result += 'A';
+    }
     if (dna[i] === 'C'){
-    result += 'G';
-   }
+      result += 'G';
+    }
     if (dna[i] === 'G'){
-    result += 'C';
+      result += 'C';
    }
   }
   return result ;
- }
+}
 
- console.log(dnaStrand("AAAA")) //,"TTTT","String AAAA is")
- console.log(dnaStrand("ATTGC")) //,"TAACG","String ATTGC is")
- console.log(dnaStrand("GTAT"))//,"CATA","String GTAT is")
+console.log(dnaStrand("AAAA")) //,"TTTT","String AAAA is")
+console.log(dnaStrand("ATTGC")) //,"TAACG","String ATTGC is")
+console.log(dnaStrand("GTAT"))//,"CATA","String GTAT is")
 
+console.log('------------------');
+console.clear();
+
+function main (verb, noun){
+  return verb + noun
+}
+
+
+console.log(main('take ', 'item'))//, 'take item')
+console.log(main('use ', 'sword'))//, 'use sword')
+
+
+
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
+
+console.log(buildString('Cheese','Milk','Chocolate'))//, 'I like Cheese, Milk, Chocolate!', 'Return the correct String');
+console.log(buildString('Cheese','Milk'))//, 'I like Cheese, Milk!', 'Return the correct String');
+console.log(buildString('Chocolate'))//, 'I like Chocolate!', 'Return the correct String');
+
+
+console.log('------------------');
+console.clear();
+
+function booleanToString(b){
+  return  b.toString();
+}
+
+console.log(booleanToString(true))//, "true", 'When we pass in true, we want the string "true" as output');
+console.log(booleanToString(false))//, "false", 'When we pass in false, we want the string "false" as output');
+
+console.log('------------------');
+console.clear();
+
+function cookie(x){
+  if(typeof x === 'string'){
+    return "Who ate the last cookie? It was Zach!";
+  }; if (typeof x === 'number'){
+    return "Who ate the last cookie? It was Monica!";
+  }; 
+  return  "Who ate the last cookie? It was the dog!";
+}
+
+console.log(cookie("Ryan"))//, "Who ate the last cookie? It was Zach!");
+console.log(cookie(26))//, "Who ate the last cookie? It was Monica!");
+console.log(cookie(2.3))//, "Who ate the last cookie? It was Monica!");
+console.log(cookie(true))//, "Who ate the last cookie? It was the dog!");
+
+console.log('------------------');
+console.clear();
+
+
+function myFirstKata(a, b) {
+  if (typeof a === "number" && typeof(b) === "number") {
+    return a % b + b % a;;
+  } else {
+    return false;
+  }
+}
+
+console.log(myFirstKata(3,5))//,(3 % 5 + 5 % 3));
+console.log(myFirstKata("hello",3))//,false);
+console.log(myFirstKata(67,"bye"))//,false);
+console.log(myFirstKata(true,true))//,false);
+console.log(myFirstKata(314,107))//,(107 % 314 + 314 % 107));
+console.log(myFirstKata(19483,9))//,(9 % 19483 + 19483 % 9));
+
+
+
+console.log('------------------');
+console.clear();
 
 
 
