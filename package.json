@@ -25,6 +25,7 @@
     "19-sort" : "node --watch ./js/19-sort.js",
     "20-reduce" : "node --watch ./js/20-reduce.js",
     "21-destrukturizavimas-rest" : "node --watch ./js/21-destrukturizavimas-rest.js",
+    "22-switch" : "node --watch ./js/22-switch.js",
     "adult" : "node --watch ./task/adult.js",
     "biggest-number" : "node --watch ./task/biggest-number.js",
     "digit-count" : "node --watch ./task/digit-count.js",

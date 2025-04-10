@@ -143,8 +143,62 @@ const numbers = [
 // Pirmas skaicius yra X ir dar yra Y papildomu skaiciu.
 
 for (const [first, ...rest] of numbers) {
-//  const first = number[0];
-//  const rest = number.slice(1);
+    //  
+    //  const first = number[0];
+    //  const rest = number.slice(1);
     const result = `Pirmas skaicius yra ${first} ir dar yra ${rest.length} papildomu skaiciu.`;
     console.log(result);
 }
+console.clear();
+function min(...list) {
+    let minimum = Infinity;
+
+    for (const number of list) {
+        if (number < minimum) {
+            minimum = number;
+        }
+    }
+
+    return minimum;
+}
+
+console.log(min(1));
+console.log(min(1, 2, 3));
+console.log(min(-1, -2, -3));
+console.log(min(-1, -2, -3, -2, -3, -2, -3, -2, -3, -2));
+
+console.log(Math.min(1));
+console.log(Math.min(1, 2, 3));
+console.log(Math.min(-1, -2, -3));
+console.log(Math.min(-1, -2, -3, -2, -3, -2, -3, -2, -3, -2));
+
+const ddd = [1, 2, 3];
+console.log(Math.min(...ddd));
+console.log(Math.min(1, 2, 3));
+console.log(Math.max(...ddd));
+
+// ...ddd = 1, 2, 3
+const f = [...ddd];
+console.log(f);
+
+console.log(ddd);
+console.log(...ddd);
+console.log(1, 2, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

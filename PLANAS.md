@@ -8,14 +8,14 @@
     - ~~objektas (object)~~
     - ~~null~~ (reiksme neegzistuoja, bet mes ketiname ja gauti/paskaiciuoti)
     - ~~underfined~~ (reiksme neegzistuoja, kai kreipiesi i atminti ir joje nera duomens)
--   funkcijos (perpanaodojams kodo blokas/logika):
+-   ~~funkcijos (perpanaodojams kodo blokas/logika):~~
     - ~~"paprastras"~~
-    - rodykline
-    - metodai:
+    - ~~rodykline~~
+    - ~~metodai:~~
       - Math methods
       - ~~string methods~~
       - ~~number methods~~
-      - array methods
+      - ~~array methods~~
       - ~~object methods~~
 -   palyginimas:
     - ~~if~~
