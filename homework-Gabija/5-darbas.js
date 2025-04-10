@@ -59,3 +59,45 @@ console.log(namoAukstis(25));
 console.clear();
 
 //uzd 3 b) Statome namą iš plytų. Vienos plytos plotis yra 0.2 metrai, o aukštis yra 0.1 metro. Parašykite funkciją, kuriai nurodžius namo išmatavimus (plotis, ilgis, aukštis), ji apskaičiuotų kiek plytų reikės dėti. (PVZ jei ilgis yra 1m, plotis 2m aukštis yra 2m, turime dėti 600 plytų)
+
+function kiekPlytu(plotis, ilgis, aukstis) {
+    //plytosPlotis = 0.2 metrai, 
+    //plytosAukštis = 0.1 metro.
+    let sienosPloptas = ((plotis+ilgis)*aukstis)*2;
+    let plytosPlotas = 0.2*0.1
+    return Math.ceil(sienosPloptas/plytosPlotas)
+}
+
+console.log(kiekPlytu(2,1,2));
+console.clear();
+
+//užd 3 c) Statyti namą kainuoja. Kiekvienas namas turi 1 duris, x plytų ir 6 langus kiekviename aukšte. Padarykite funkciją, kuriai pateikus plytų, langų ir durų kainą; bei namo plotį, ilgį ir aukštį - ji paskaičiuotų kiek eurų kainuotų pastatyti norimą namą.
+
+function kiekKainuosNamas(plytuKaina,langoKaina,duruKaina,namoPlotis,namoIlgis,namoAukstiss) {
+    if ( namoAukstiss % 2 === 0 ) {
+        kiekAukstuNamas =  namoAukstiss/2
+    }
+    else if ( namoAukstiss % 2.5 === 0 ) {
+       kiekAukstuNamas =  namoAukstiss/2.5
+    } else {
+        kiekAukstuNamas =  Math.floor(((namoAukstiss-5)/2)+2)
+    }
+    
+    let sienosPloptas1 = ((namoPlotis + namoIlgis) * namoAukstiss) *2;
+    let plytosPlota1 = 0.2*0.1
+    kiekReikesPlytu = Math.ceil( sienosPloptas1 / plytosPlota1 )
+    
+    
+    let durys = duruKaina;
+    let langai = langoKaina * 6 * kiekAukstuNamas;
+    let plytos = kiekReikesPlytu * plytuKaina
+    console.log(langai)
+    return (durys+langai+plytos)
+}
+
+
+console.log(kiekKainuosNamas(20,5000,500,15,20,10));
+console.clear();
+
+//uzd 4. Kalėdų senelis pakeitė darbą ir tapo gimtadienio dėde. Vietoj gerų ir blogų vaikų, jis dosniai apdovanoja ypatingus gimtadienius (1, 5, 10, 15, 16, 18, 20 ir visi kiti jubiliejai) ir nelabai gerai apdovanoja paprastus gimtadienius. Padarykite du sąrašus - vieną su nuostabiomis dovanomis (vienaragis, pilis, mašina, ...), kitą su nefainomis dovanomis (kojinės, ananasas, jau skaityta knyga, ...). Padarykite funkciją, kuriai pateikus jūsų metus, ji pasveikins su gimtadieniu ir padovanos atitinkamą dovaną.
+
