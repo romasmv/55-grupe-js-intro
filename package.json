@@ -46,6 +46,7 @@
     "3-darbas" : "node --watch ./homework-Gabija/3-darbas.js",
     "4-darbas" : "node --watch ./homework-Gabija/4-darbas.js",
     "5-darbas" : "node --watch ./homework-Gabija/5-darbas.js",
+    "6-darbas" : "node --watch ./homework-Gabija/6-darbas.js",
     "1-uzduotis" : "node --watch ./homework-Destitojas/1-uzduotis.js",
     "2-codewars" : "node --watch ./homework-Destitojas/2-codewars.js",
     "js": "node ./index.js",

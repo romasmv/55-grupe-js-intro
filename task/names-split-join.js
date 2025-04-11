@@ -24,8 +24,10 @@ function correctSentence(text) {
         .toLowerCase()
         .split(', ');
 
+
     for (let i = 0; i < names.length; i++) {
         const name = names[i];
+        
         const firstLetter = name[0].toUpperCase();
         const restName = name.slice(1);
 
