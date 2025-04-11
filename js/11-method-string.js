@@ -13,7 +13,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // toLowerCase - (pakeisti i mazasias raides)
 // slice - (nupjauti viena ar kelis simbolius ir rodo likuti)
 // trim - (panaikina tarpus pradzioje ir pabaigoje)
-// split -  (padalina i masyva pagal simboli)
+
+// split -  (padalina i masyva pagal simboli pvz: string.split(" "))-cia padalins bet koki Stringo tipo teksta pagal tarpa i masyva su to teksto zodziais
+
 // charCodeAt - (grazina simbolio kodas pagal indeksa)
 // fromCharCode - (grazina simboli pagal kodas)
 */ 

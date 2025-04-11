@@ -534,6 +534,175 @@ console.log(myFirstKata(19483,9))//,(9 % 19483 + 19483 % 9));
 console.log('------------------');
 console.clear();
 
+function greet(name){
+  if(name === "Johnny")
+    return "Hello, my love!";
+  return `Hello, ${name}!`;
+  
+}
+console.log(greet("Johnny"))//, 
+console.log(greet("Jim"))//, ;
+
+
+console.log('------------------');
+console.clear();
+
+function areYouPlayingBanjo(name) {
+  if (name[0]==='R'||name[0]==='r'){
+    return name + " plays banjo";
+  } else {
+    return name + " does not play banjo";
+  }
+}
+
+console.log(areYouPlayingBanjo("Adam"))//, "Adam does not play banjo");
+console.log(areYouPlayingBanjo("Paul"))//, "Paul does not play banjo");
+console.log(areYouPlayingBanjo("Ringo"))//, "Ringo plays banjo");
+ console.log(areYouPlayingBanjo("bravo"))//, "bravo does not play banjo");
+ console.log(areYouPlayingBanjo("rolf"))//, "rolf plays banjo");
+ 
+ console.log('------------------');
+ console.clear();
+ 
+ /*Duotas masyvas, grąžinkite kiekvieno iš jų atvirkštinę sumą. Kiekvienas teigiamas tampa neigiamu, o neigiamas – teigiamais.
+ 
+[1, 2, 3, 4, 5] --> [-1, -2, -3, -4, -5]
+[1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5]
+[] --> []
+
+Galite manyti, kad visos reikšmės yra sveikieji skaičiai. Nemutuokite įvesties masyvo.*/
+
+function invert(array) {
+  for( let i=0; i<array.length; i++){
+    array[i] = -array[i];
+  if (array[i] === 0) {
+    array[i] = 0;}}
+if (array.length === 0) {
+  return array;}
+  else {
+    return array;}
+  } 
+  
+  
+console.log(invert([1,2,3,4,5])) 
+console.log(invert([1,-2,3,-4,5]))  
+console.log(invert([])) 
+console.log(invert([0])) 
+  
+console.log('------------------');
+console.clear();
+  
+function maps(x){
+let result = [];
+for (let i = 0; i < x.length; i++) {
+result.push(x[i] * 2);
+}
+return result;
+}
+  
+/* labai geras sprendimas su map() funkcija
+function maps(x){
+return x.map(n => n * 2);
+}                              
+  */
+   
+   
+console.log(maps([1, 2, 3]))//, [2, 4, 6]);
+console.log(maps([4, 1, 1, 1, 4]))//, [8, 2, 2, 2, 8]); 
+console.log(maps([2, 2, 2, 2, 2, 2]))//, [4, 4, 4, 4, 4, 4]); 
+   
+   
+console.log('------------------');
+console.clear();
+   
+/*Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+   
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24 */
+   
+function grow(x){
+let result = 0;
+for (let i = 0; i < x.length; i++) {
+result = x.reduce((a, b) => a * b);
+}
+return result;
+}
+console.log(grow([1, 2, 3]))//, 6);
+console.log(grow([4, 1, 1, 1, 4]))//, 16); 
+console.log(grow([2, 2, 2, 2, 2, 2]))//, 64);
+    
+    
+console.log('------------------');
+console.clear();
+    
+    
+function makeNegative(num) {
+       
+if (num > 0) {
+return -num;
+} else if (num < 0) {
+return num;
+} else {
+return 0;
+}
+} 
+
+console.log(makeNegative(9))//, -1);
+console.log(makeNegative(64))//, -1);
+console.log(makeNegative(12))//, -1);
+console.log(makeNegative(-1))//, -1);
+console.log(makeNegative(9))//, -1);
+      
+console.log('------------------');
+console.clear();
+/*
+Įvadas
+Pirmasis šimtmetis apima nuo 1 metų iki 100 metų imtinai , antrasis amžius - nuo 101 metų iki 200 metų imtinai ir kt.
+      
+Užduotis
+Suteikę metus, grąžinkite šimtmetį, kuriame jie yra.
+      
+      Pavyzdžiai
+      1705 --> 18
+      1900 --> 19
+      1601 --> 17
+      2000 --> 20
+      2742 --> 28
+
+Pastaba: šioje katoje naudojama griežta konstrukcija, kaip parodyta aprašyme ir pavyzdžiuose, daugiau apie tai galite paskaityti čia
+      */
+     
+     
+function century(year) {
+return Math.ceil(year/100)
+}
+      
+console.log(century(1705))//, 18, 'Testing for year 1705');
+console.log(century(1900))//, 19, 'Testing for year 1900');
+console.log(century(1601))//, 17, 'Testing for year 1601');
+console.log(century(2000))//, 20, 'Testing for year 2000');
+console.log(century(89))//, 1, 'Testing for year 89');
+      
+      
+console.log('------------------');
+console.clear();
+
+// Daugybos lentele kai duotasd skaicius   
+function multiTable(number) {
+let result = '';
+for (let i = 1;i<=10;i++){
+result += `${i} * ${number} = ${i*number}` ;
+if (i<10) {result += `\n`;}
+}
+return result
+}
+
+console.log(multiTable(5));
+
+console.log('------------------');
+console.clear();
+
+
+
 
 
 
