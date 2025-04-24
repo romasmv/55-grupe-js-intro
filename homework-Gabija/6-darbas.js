@@ -91,9 +91,10 @@ function maxWord(text) {
     let maxZodioIlgis = 0;
     let maxZodis = '';
     for (let i = 0; i < zodziai.length; i++) {
-        if (zodziai[i].length > maxZodioIlgis){
+        if (zodziai[i].length > maxZodioIlgis)
+            {
             maxZodioIlgis = zodziai[i].length;
-    maxZodis=zodziai[i];
+            maxZodis=zodziai[i];
 }  
 
 }
@@ -105,18 +106,114 @@ console.log(maxWord('Labas rytas Lietuva !'));
 console.clear();
 
 //9. Funkcija, kuri išrikiuoja žodžius pagal ilgį didėjančia tvarka
+function maxWord(text) {
+    let zodziai =text.split(" ");
+    const rikiouti = zodziai.sort((a,b) => a.length - b.length)
+    return rikiouti
+}
+console.log(maxWord('išrikiuoja žodžius pagal ilgį didėjančia tvarka'));
+console.clear();
 
 
 //10. Funkcija, kuri grąžina pirmą skaičių masyve, kuris dalinasi iš 7
-
+function skaiciusDalinasiIs7 (masyvas){
+    for (let i = 0; i < masyvas.length; i++) {
+        if (masyvas[i]%7===0) {
+            return masyvas[i]
+        }
+        
+    }
+}
+console.log(skaiciusDalinasiIs7([1,49,20,38]));
+console.clear();
 
 //11. Funkcija, kuri priima masyvą vardų ir grąžina tik tuos, kurie prasideda „A“ raide
-
+function pirmaRaideA(masyvas) {
+    let rezultatas = [];
+    for (let i = 0; i < masyvas.length; i++) {
+        if (masyvas[i][0]==='A'){
+            rezultatas.push(masyvas[i])
+        }    
+    }
+    return rezultatas
+}
+console.log(pirmaRaideA(['Petras', 'Antanas','Birute','Alfredas']))
+console.clear();
 
 //12. Funkcija, kuri turi sąraše rasti skaičių, kuris jame kartojasi daugiau nei vieną kartą
 
+function rastiSkaiciu (masyvas){
+    for (let i = 0; i < masyvas.length; i++) {
+        let kiekKartojasi = 0;
+   for (let j = 0; j < masyvas.length; j++) {
+    if (masyvas[i]===masyvas[j]){
+        kiekKartojasi++
+    }
+}
+if(kiekKartojasi > 2){ //palygina dar save tai daugiau uz 2(tie patis elementai)
+    return masyvas[i];
+}
+
+}
+return null
+}
+console.log(rastiSkaiciu([1,2,3,4,3,5,3,2,14]));
+console.clear();
 
 //13. Sukurk funkciją, kuri grąžins visus duoto sąrašo skaičius, kurie yra tarp dviejų nurodytų reikšmių ([2, 5, 36, 8, 15, 6] masyvui nurodžius 5 20 intervalą, bus grąžinama [5, 8, 15, 6] )
-
+function grazinaInterv(masyvas, nuo, iki) {
+    let grazinaSkaicius = [];
+    for (let i = 0; i < masyvas.length; i++) {
+        if (masyvas[i]>=nuo && masyvas[i]<=iki) {
+            grazinaSkaicius.push(masyvas[i])
+        }
+        
+    }
+    return grazinaSkaicius;
+}
+console.log(grazinaInterv([2, 5, 36, 8, 15, 6],5, 20));
+console.clear();
 
 //14. Parašykite funkciją, kuri iš žodžių sąrašo išrinktų ir grąžintų tik tuos žodžius, kuriuose yra raidė e
+
+
+function kuriuoseE(masyvas) {
+    let rezutatas101=[];
+    for (let i = 0; i < masyvas.length; i++) {
+       if (masyvas[i].includes('e')){
+   rezutatas101.push(masyvas[i])
+    }
+}
+return rezutatas101
+}
+
+console.log(kuriuoseE(['labas','rytas','Lietuva','peleda']));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
